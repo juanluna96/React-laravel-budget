@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/wallet', 'WalletController@index');
+Route::post('/transfer', 'TransferController@store');
