@@ -2,12 +2,14 @@
 
 namespace Tests\Unit;
 
-use App\Transfer;
 use App\Wallet;
+use App\Transfer;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class WalletTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * A basic unit test example.
      *
