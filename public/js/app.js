@@ -65979,8 +65979,8 @@ if (document.getElementById('app')) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\juang\Downloads\proyectos\laravel_react\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\juang\Downloads\proyectos\laravel_react\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\juang\Documents\CURSOS FRAMEWORKS UDEMY\React-laravel-budget\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\juang\Documents\CURSOS FRAMEWORKS UDEMY\React-laravel-budget\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
