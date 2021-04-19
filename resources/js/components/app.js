@@ -4,15 +4,21 @@ import ListadoTransfers from './Transfers/ListadoTransfers';
 import Wallet from './Wallet';
 import FormTransfer from './Transfers/FormTransfer';
 
+// Redux
+import { Provider } from 'react-redux';
+import store from '../store';
+
 function App() {
     return (
-        <div className="container mt-5">
-            <div className="row justify-content-center">
-                <Wallet></Wallet>
-                <FormTransfer></FormTransfer>
+        <Provider store={ store }>
+            <div className="container mt-5">
+                <div className="row justify-content-center">
+                    <Wallet></Wallet>
+                    <FormTransfer></FormTransfer>
+                </div>
+                <ListadoTransfers></ListadoTransfers>
             </div>
-            <ListadoTransfers></ListadoTransfers>
-        </div>
+        </Provider>
     );
 }
 
