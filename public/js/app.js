@@ -70408,8 +70408,14 @@ var ListadoTransfers = function ListadoTransfers() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mx-auto m-t-md col-md-10"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
-    className: "table"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, transferencias.map(function (transferencia) {
+    className: "table mt-3"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+    className: "bg-primary"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    className: "text-center text-white font-weight-bold"
+  }, "Transferencia"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    className: "text-center text-white font-weight-bold"
+  }, "Cantidad"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, transferencias.map(function (transferencia) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Transfer__WEBPACK_IMPORTED_MODULE_1__["default"], {
       transferencia: transferencia,
       key: transferencia.id
@@ -70438,10 +70444,16 @@ var Transfer = function Transfer(_ref) {
   var transferencia = _ref.transferencia;
   var amount = transferencia.amount,
       description = transferencia.description;
+
+  var tipoTransferencia = function tipoTransferencia(cantidad) {
+    var tipo_transferencia = cantidad > 0 ? "text-success" : "text-danger";
+    return tipo_transferencia;
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
     className: "text-center"
   }, description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-    className: "text-center"
+    className: "".concat(tipoTransferencia(amount), " text-center")
   }, amount));
 };
 
@@ -70512,7 +70524,8 @@ var initialState = {
   switch (type) {
     case _types__WEBPACK_IMPORTED_MODULE_0__["OBTENER_TRANSFERS"]:
       return _objectSpread(_objectSpread({}, state), {}, {
-        transfers: payload.transfers
+        transfers: payload.transfers,
+        money: payload.money
       });
 
     default:

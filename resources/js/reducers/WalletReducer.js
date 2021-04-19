@@ -9,7 +9,7 @@ const initialState = {
 export default (state = initialState, { type, payload }) => {
     switch (type) {
         case OBTENER_TRANSFERS:
-            return { ...state, transfers: payload.transfers }
+            return { ...state, transfers: payload.transfers, money: payload.money }
         default:
             return state
     }
