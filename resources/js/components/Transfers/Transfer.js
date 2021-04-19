@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Transfer = () => {
+const Transfer = ({ transferencia }) => {
+    const { amount, description } = transferencia;
     return (
         <tr>
-            <td className="text-center">Ejemplo</td>
-            <td className="text-center">1200.00</td>
+            <td className="text-center">{ description }</td>
+            <td className="text-center">{ amount }</td>
         </tr>
     )
 }
