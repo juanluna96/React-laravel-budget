@@ -155,6 +155,748 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 /***/ }),
 
+/***/ "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/memoize */ "./node_modules/@emotion/memoize/dist/memoize.browser.esm.js");
+
+
+var reactPropsRegex = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|defaultChecked|innerHTML|suppressContentEditableWarning|suppressHydrationWarning|valueLink|accept|acceptCharset|accessKey|action|allow|allowUserMedia|allowPaymentRequest|allowFullScreen|allowTransparency|alt|async|autoComplete|autoPlay|capture|cellPadding|cellSpacing|challenge|charSet|checked|cite|classID|className|cols|colSpan|content|contentEditable|contextMenu|controls|controlsList|coords|crossOrigin|data|dateTime|decoding|default|defer|dir|disabled|disablePictureInPicture|download|draggable|encType|form|formAction|formEncType|formMethod|formNoValidate|formTarget|frameBorder|headers|height|hidden|high|href|hrefLang|htmlFor|httpEquiv|id|inputMode|integrity|is|keyParams|keyType|kind|label|lang|list|loading|loop|low|marginHeight|marginWidth|max|maxLength|media|mediaGroup|method|min|minLength|multiple|muted|name|nonce|noValidate|open|optimum|pattern|placeholder|playsInline|poster|preload|profile|radioGroup|readOnly|referrerPolicy|rel|required|reversed|role|rows|rowSpan|sandbox|scope|scoped|scrolling|seamless|selected|shape|size|sizes|slot|span|spellCheck|src|srcDoc|srcLang|srcSet|start|step|style|summary|tabIndex|target|title|type|useMap|value|width|wmode|wrap|about|datatype|inlist|prefix|property|resource|typeof|vocab|autoCapitalize|autoCorrect|autoSave|color|inert|itemProp|itemScope|itemType|itemID|itemRef|on|results|security|unselectable|accentHeight|accumulate|additive|alignmentBaseline|allowReorder|alphabetic|amplitude|arabicForm|ascent|attributeName|attributeType|autoReverse|azimuth|baseFrequency|baselineShift|baseProfile|bbox|begin|bias|by|calcMode|capHeight|clip|clipPathUnits|clipPath|clipRule|colorInterpolation|colorInterpolationFilters|colorProfile|colorRendering|contentScriptType|contentStyleType|cursor|cx|cy|d|decelerate|descent|diffuseConstant|direction|display|divisor|dominantBaseline|dur|dx|dy|edgeMode|elevation|enableBackground|end|exponent|externalResourcesRequired|fill|fillOpacity|fillRule|filter|filterRes|filterUnits|floodColor|floodOpacity|focusable|fontFamily|fontSize|fontSizeAdjust|fontStretch|fontStyle|fontVariant|fontWeight|format|from|fr|fx|fy|g1|g2|glyphName|glyphOrientationHorizontal|glyphOrientationVertical|glyphRef|gradientTransform|gradientUnits|hanging|horizAdvX|horizOriginX|ideographic|imageRendering|in|in2|intercept|k|k1|k2|k3|k4|kernelMatrix|kernelUnitLength|kerning|keyPoints|keySplines|keyTimes|lengthAdjust|letterSpacing|lightingColor|limitingConeAngle|local|markerEnd|markerMid|markerStart|markerHeight|markerUnits|markerWidth|mask|maskContentUnits|maskUnits|mathematical|mode|numOctaves|offset|opacity|operator|order|orient|orientation|origin|overflow|overlinePosition|overlineThickness|panose1|paintOrder|pathLength|patternContentUnits|patternTransform|patternUnits|pointerEvents|points|pointsAtX|pointsAtY|pointsAtZ|preserveAlpha|preserveAspectRatio|primitiveUnits|r|radius|refX|refY|renderingIntent|repeatCount|repeatDur|requiredExtensions|requiredFeatures|restart|result|rotate|rx|ry|scale|seed|shapeRendering|slope|spacing|specularConstant|specularExponent|speed|spreadMethod|startOffset|stdDeviation|stemh|stemv|stitchTiles|stopColor|stopOpacity|strikethroughPosition|strikethroughThickness|string|stroke|strokeDasharray|strokeDashoffset|strokeLinecap|strokeLinejoin|strokeMiterlimit|strokeOpacity|strokeWidth|surfaceScale|systemLanguage|tableValues|targetX|targetY|textAnchor|textDecoration|textRendering|textLength|to|transform|u1|u2|underlinePosition|underlineThickness|unicode|unicodeBidi|unicodeRange|unitsPerEm|vAlphabetic|vHanging|vIdeographic|vMathematical|values|vectorEffect|version|vertAdvY|vertOriginX|vertOriginY|viewBox|viewTarget|visibility|widths|wordSpacing|writingMode|x|xHeight|x1|x2|xChannelSelector|xlinkActuate|xlinkArcrole|xlinkHref|xlinkRole|xlinkShow|xlinkTitle|xlinkType|xmlBase|xmlns|xmlnsXlink|xmlLang|xmlSpace|y|y1|y2|yChannelSelector|z|zoomAndPan|for|class|autofocus)|(([Dd][Aa][Tt][Aa]|[Aa][Rr][Ii][Aa]|x)-.*))$/; // https://esbench.com/bench/5bfee68a4cd7e6009ef61d23
+
+var index = Object(_emotion_memoize__WEBPACK_IMPORTED_MODULE_0__["default"])(function (prop) {
+  return reactPropsRegex.test(prop) || prop.charCodeAt(0) === 111
+  /* o */
+  && prop.charCodeAt(1) === 110
+  /* n */
+  && prop.charCodeAt(2) < 91;
+}
+/* Z+1 */
+);
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
+
+
+/***/ }),
+
+/***/ "./node_modules/@emotion/memoize/dist/memoize.browser.esm.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@emotion/memoize/dist/memoize.browser.esm.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function memoize(fn) {
+  var cache = {};
+  return function (arg) {
+    if (cache[arg] === undefined) cache[arg] = fn(arg);
+    return cache[arg];
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (memoize);
+
+
+/***/ }),
+
+/***/ "./node_modules/@emotion/stylis/dist/stylis.browser.esm.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@emotion/stylis/dist/stylis.browser.esm.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function stylis_min (W) {
+  function M(d, c, e, h, a) {
+    for (var m = 0, b = 0, v = 0, n = 0, q, g, x = 0, K = 0, k, u = k = q = 0, l = 0, r = 0, I = 0, t = 0, B = e.length, J = B - 1, y, f = '', p = '', F = '', G = '', C; l < B;) {
+      g = e.charCodeAt(l);
+      l === J && 0 !== b + n + v + m && (0 !== b && (g = 47 === b ? 10 : 47), n = v = m = 0, B++, J++);
+
+      if (0 === b + n + v + m) {
+        if (l === J && (0 < r && (f = f.replace(N, '')), 0 < f.trim().length)) {
+          switch (g) {
+            case 32:
+            case 9:
+            case 59:
+            case 13:
+            case 10:
+              break;
+
+            default:
+              f += e.charAt(l);
+          }
+
+          g = 59;
+        }
+
+        switch (g) {
+          case 123:
+            f = f.trim();
+            q = f.charCodeAt(0);
+            k = 1;
+
+            for (t = ++l; l < B;) {
+              switch (g = e.charCodeAt(l)) {
+                case 123:
+                  k++;
+                  break;
+
+                case 125:
+                  k--;
+                  break;
+
+                case 47:
+                  switch (g = e.charCodeAt(l + 1)) {
+                    case 42:
+                    case 47:
+                      a: {
+                        for (u = l + 1; u < J; ++u) {
+                          switch (e.charCodeAt(u)) {
+                            case 47:
+                              if (42 === g && 42 === e.charCodeAt(u - 1) && l + 2 !== u) {
+                                l = u + 1;
+                                break a;
+                              }
+
+                              break;
+
+                            case 10:
+                              if (47 === g) {
+                                l = u + 1;
+                                break a;
+                              }
+
+                          }
+                        }
+
+                        l = u;
+                      }
+
+                  }
+
+                  break;
+
+                case 91:
+                  g++;
+
+                case 40:
+                  g++;
+
+                case 34:
+                case 39:
+                  for (; l++ < J && e.charCodeAt(l) !== g;) {
+                  }
+
+              }
+
+              if (0 === k) break;
+              l++;
+            }
+
+            k = e.substring(t, l);
+            0 === q && (q = (f = f.replace(ca, '').trim()).charCodeAt(0));
+
+            switch (q) {
+              case 64:
+                0 < r && (f = f.replace(N, ''));
+                g = f.charCodeAt(1);
+
+                switch (g) {
+                  case 100:
+                  case 109:
+                  case 115:
+                  case 45:
+                    r = c;
+                    break;
+
+                  default:
+                    r = O;
+                }
+
+                k = M(c, r, k, g, a + 1);
+                t = k.length;
+                0 < A && (r = X(O, f, I), C = H(3, k, r, c, D, z, t, g, a, h), f = r.join(''), void 0 !== C && 0 === (t = (k = C.trim()).length) && (g = 0, k = ''));
+                if (0 < t) switch (g) {
+                  case 115:
+                    f = f.replace(da, ea);
+
+                  case 100:
+                  case 109:
+                  case 45:
+                    k = f + '{' + k + '}';
+                    break;
+
+                  case 107:
+                    f = f.replace(fa, '$1 $2');
+                    k = f + '{' + k + '}';
+                    k = 1 === w || 2 === w && L('@' + k, 3) ? '@-webkit-' + k + '@' + k : '@' + k;
+                    break;
+
+                  default:
+                    k = f + k, 112 === h && (k = (p += k, ''));
+                } else k = '';
+                break;
+
+              default:
+                k = M(c, X(c, f, I), k, h, a + 1);
+            }
+
+            F += k;
+            k = I = r = u = q = 0;
+            f = '';
+            g = e.charCodeAt(++l);
+            break;
+
+          case 125:
+          case 59:
+            f = (0 < r ? f.replace(N, '') : f).trim();
+            if (1 < (t = f.length)) switch (0 === u && (q = f.charCodeAt(0), 45 === q || 96 < q && 123 > q) && (t = (f = f.replace(' ', ':')).length), 0 < A && void 0 !== (C = H(1, f, c, d, D, z, p.length, h, a, h)) && 0 === (t = (f = C.trim()).length) && (f = '\x00\x00'), q = f.charCodeAt(0), g = f.charCodeAt(1), q) {
+              case 0:
+                break;
+
+              case 64:
+                if (105 === g || 99 === g) {
+                  G += f + e.charAt(l);
+                  break;
+                }
+
+              default:
+                58 !== f.charCodeAt(t - 1) && (p += P(f, q, g, f.charCodeAt(2)));
+            }
+            I = r = u = q = 0;
+            f = '';
+            g = e.charCodeAt(++l);
+        }
+      }
+
+      switch (g) {
+        case 13:
+        case 10:
+          47 === b ? b = 0 : 0 === 1 + q && 107 !== h && 0 < f.length && (r = 1, f += '\x00');
+          0 < A * Y && H(0, f, c, d, D, z, p.length, h, a, h);
+          z = 1;
+          D++;
+          break;
+
+        case 59:
+        case 125:
+          if (0 === b + n + v + m) {
+            z++;
+            break;
+          }
+
+        default:
+          z++;
+          y = e.charAt(l);
+
+          switch (g) {
+            case 9:
+            case 32:
+              if (0 === n + m + b) switch (x) {
+                case 44:
+                case 58:
+                case 9:
+                case 32:
+                  y = '';
+                  break;
+
+                default:
+                  32 !== g && (y = ' ');
+              }
+              break;
+
+            case 0:
+              y = '\\0';
+              break;
+
+            case 12:
+              y = '\\f';
+              break;
+
+            case 11:
+              y = '\\v';
+              break;
+
+            case 38:
+              0 === n + b + m && (r = I = 1, y = '\f' + y);
+              break;
+
+            case 108:
+              if (0 === n + b + m + E && 0 < u) switch (l - u) {
+                case 2:
+                  112 === x && 58 === e.charCodeAt(l - 3) && (E = x);
+
+                case 8:
+                  111 === K && (E = K);
+              }
+              break;
+
+            case 58:
+              0 === n + b + m && (u = l);
+              break;
+
+            case 44:
+              0 === b + v + n + m && (r = 1, y += '\r');
+              break;
+
+            case 34:
+            case 39:
+              0 === b && (n = n === g ? 0 : 0 === n ? g : n);
+              break;
+
+            case 91:
+              0 === n + b + v && m++;
+              break;
+
+            case 93:
+              0 === n + b + v && m--;
+              break;
+
+            case 41:
+              0 === n + b + m && v--;
+              break;
+
+            case 40:
+              if (0 === n + b + m) {
+                if (0 === q) switch (2 * x + 3 * K) {
+                  case 533:
+                    break;
+
+                  default:
+                    q = 1;
+                }
+                v++;
+              }
+
+              break;
+
+            case 64:
+              0 === b + v + n + m + u + k && (k = 1);
+              break;
+
+            case 42:
+            case 47:
+              if (!(0 < n + m + v)) switch (b) {
+                case 0:
+                  switch (2 * g + 3 * e.charCodeAt(l + 1)) {
+                    case 235:
+                      b = 47;
+                      break;
+
+                    case 220:
+                      t = l, b = 42;
+                  }
+
+                  break;
+
+                case 42:
+                  47 === g && 42 === x && t + 2 !== l && (33 === e.charCodeAt(t + 2) && (p += e.substring(t, l + 1)), y = '', b = 0);
+              }
+          }
+
+          0 === b && (f += y);
+      }
+
+      K = x;
+      x = g;
+      l++;
+    }
+
+    t = p.length;
+
+    if (0 < t) {
+      r = c;
+      if (0 < A && (C = H(2, p, r, d, D, z, t, h, a, h), void 0 !== C && 0 === (p = C).length)) return G + p + F;
+      p = r.join(',') + '{' + p + '}';
+
+      if (0 !== w * E) {
+        2 !== w || L(p, 2) || (E = 0);
+
+        switch (E) {
+          case 111:
+            p = p.replace(ha, ':-moz-$1') + p;
+            break;
+
+          case 112:
+            p = p.replace(Q, '::-webkit-input-$1') + p.replace(Q, '::-moz-$1') + p.replace(Q, ':-ms-input-$1') + p;
+        }
+
+        E = 0;
+      }
+    }
+
+    return G + p + F;
+  }
+
+  function X(d, c, e) {
+    var h = c.trim().split(ia);
+    c = h;
+    var a = h.length,
+        m = d.length;
+
+    switch (m) {
+      case 0:
+      case 1:
+        var b = 0;
+
+        for (d = 0 === m ? '' : d[0] + ' '; b < a; ++b) {
+          c[b] = Z(d, c[b], e).trim();
+        }
+
+        break;
+
+      default:
+        var v = b = 0;
+
+        for (c = []; b < a; ++b) {
+          for (var n = 0; n < m; ++n) {
+            c[v++] = Z(d[n] + ' ', h[b], e).trim();
+          }
+        }
+
+    }
+
+    return c;
+  }
+
+  function Z(d, c, e) {
+    var h = c.charCodeAt(0);
+    33 > h && (h = (c = c.trim()).charCodeAt(0));
+
+    switch (h) {
+      case 38:
+        return c.replace(F, '$1' + d.trim());
+
+      case 58:
+        return d.trim() + c.replace(F, '$1' + d.trim());
+
+      default:
+        if (0 < 1 * e && 0 < c.indexOf('\f')) return c.replace(F, (58 === d.charCodeAt(0) ? '' : '$1') + d.trim());
+    }
+
+    return d + c;
+  }
+
+  function P(d, c, e, h) {
+    var a = d + ';',
+        m = 2 * c + 3 * e + 4 * h;
+
+    if (944 === m) {
+      d = a.indexOf(':', 9) + 1;
+      var b = a.substring(d, a.length - 1).trim();
+      b = a.substring(0, d).trim() + b + ';';
+      return 1 === w || 2 === w && L(b, 1) ? '-webkit-' + b + b : b;
+    }
+
+    if (0 === w || 2 === w && !L(a, 1)) return a;
+
+    switch (m) {
+      case 1015:
+        return 97 === a.charCodeAt(10) ? '-webkit-' + a + a : a;
+
+      case 951:
+        return 116 === a.charCodeAt(3) ? '-webkit-' + a + a : a;
+
+      case 963:
+        return 110 === a.charCodeAt(5) ? '-webkit-' + a + a : a;
+
+      case 1009:
+        if (100 !== a.charCodeAt(4)) break;
+
+      case 969:
+      case 942:
+        return '-webkit-' + a + a;
+
+      case 978:
+        return '-webkit-' + a + '-moz-' + a + a;
+
+      case 1019:
+      case 983:
+        return '-webkit-' + a + '-moz-' + a + '-ms-' + a + a;
+
+      case 883:
+        if (45 === a.charCodeAt(8)) return '-webkit-' + a + a;
+        if (0 < a.indexOf('image-set(', 11)) return a.replace(ja, '$1-webkit-$2') + a;
+        break;
+
+      case 932:
+        if (45 === a.charCodeAt(4)) switch (a.charCodeAt(5)) {
+          case 103:
+            return '-webkit-box-' + a.replace('-grow', '') + '-webkit-' + a + '-ms-' + a.replace('grow', 'positive') + a;
+
+          case 115:
+            return '-webkit-' + a + '-ms-' + a.replace('shrink', 'negative') + a;
+
+          case 98:
+            return '-webkit-' + a + '-ms-' + a.replace('basis', 'preferred-size') + a;
+        }
+        return '-webkit-' + a + '-ms-' + a + a;
+
+      case 964:
+        return '-webkit-' + a + '-ms-flex-' + a + a;
+
+      case 1023:
+        if (99 !== a.charCodeAt(8)) break;
+        b = a.substring(a.indexOf(':', 15)).replace('flex-', '').replace('space-between', 'justify');
+        return '-webkit-box-pack' + b + '-webkit-' + a + '-ms-flex-pack' + b + a;
+
+      case 1005:
+        return ka.test(a) ? a.replace(aa, ':-webkit-') + a.replace(aa, ':-moz-') + a : a;
+
+      case 1e3:
+        b = a.substring(13).trim();
+        c = b.indexOf('-') + 1;
+
+        switch (b.charCodeAt(0) + b.charCodeAt(c)) {
+          case 226:
+            b = a.replace(G, 'tb');
+            break;
+
+          case 232:
+            b = a.replace(G, 'tb-rl');
+            break;
+
+          case 220:
+            b = a.replace(G, 'lr');
+            break;
+
+          default:
+            return a;
+        }
+
+        return '-webkit-' + a + '-ms-' + b + a;
+
+      case 1017:
+        if (-1 === a.indexOf('sticky', 9)) break;
+
+      case 975:
+        c = (a = d).length - 10;
+        b = (33 === a.charCodeAt(c) ? a.substring(0, c) : a).substring(d.indexOf(':', 7) + 1).trim();
+
+        switch (m = b.charCodeAt(0) + (b.charCodeAt(7) | 0)) {
+          case 203:
+            if (111 > b.charCodeAt(8)) break;
+
+          case 115:
+            a = a.replace(b, '-webkit-' + b) + ';' + a;
+            break;
+
+          case 207:
+          case 102:
+            a = a.replace(b, '-webkit-' + (102 < m ? 'inline-' : '') + 'box') + ';' + a.replace(b, '-webkit-' + b) + ';' + a.replace(b, '-ms-' + b + 'box') + ';' + a;
+        }
+
+        return a + ';';
+
+      case 938:
+        if (45 === a.charCodeAt(5)) switch (a.charCodeAt(6)) {
+          case 105:
+            return b = a.replace('-items', ''), '-webkit-' + a + '-webkit-box-' + b + '-ms-flex-' + b + a;
+
+          case 115:
+            return '-webkit-' + a + '-ms-flex-item-' + a.replace(ba, '') + a;
+
+          default:
+            return '-webkit-' + a + '-ms-flex-line-pack' + a.replace('align-content', '').replace(ba, '') + a;
+        }
+        break;
+
+      case 973:
+      case 989:
+        if (45 !== a.charCodeAt(3) || 122 === a.charCodeAt(4)) break;
+
+      case 931:
+      case 953:
+        if (!0 === la.test(d)) return 115 === (b = d.substring(d.indexOf(':') + 1)).charCodeAt(0) ? P(d.replace('stretch', 'fill-available'), c, e, h).replace(':fill-available', ':stretch') : a.replace(b, '-webkit-' + b) + a.replace(b, '-moz-' + b.replace('fill-', '')) + a;
+        break;
+
+      case 962:
+        if (a = '-webkit-' + a + (102 === a.charCodeAt(5) ? '-ms-' + a : '') + a, 211 === e + h && 105 === a.charCodeAt(13) && 0 < a.indexOf('transform', 10)) return a.substring(0, a.indexOf(';', 27) + 1).replace(ma, '$1-webkit-$2') + a;
+    }
+
+    return a;
+  }
+
+  function L(d, c) {
+    var e = d.indexOf(1 === c ? ':' : '{'),
+        h = d.substring(0, 3 !== c ? e : 10);
+    e = d.substring(e + 1, d.length - 1);
+    return R(2 !== c ? h : h.replace(na, '$1'), e, c);
+  }
+
+  function ea(d, c) {
+    var e = P(c, c.charCodeAt(0), c.charCodeAt(1), c.charCodeAt(2));
+    return e !== c + ';' ? e.replace(oa, ' or ($1)').substring(4) : '(' + c + ')';
+  }
+
+  function H(d, c, e, h, a, m, b, v, n, q) {
+    for (var g = 0, x = c, w; g < A; ++g) {
+      switch (w = S[g].call(B, d, x, e, h, a, m, b, v, n, q)) {
+        case void 0:
+        case !1:
+        case !0:
+        case null:
+          break;
+
+        default:
+          x = w;
+      }
+    }
+
+    if (x !== c) return x;
+  }
+
+  function T(d) {
+    switch (d) {
+      case void 0:
+      case null:
+        A = S.length = 0;
+        break;
+
+      default:
+        if ('function' === typeof d) S[A++] = d;else if ('object' === typeof d) for (var c = 0, e = d.length; c < e; ++c) {
+          T(d[c]);
+        } else Y = !!d | 0;
+    }
+
+    return T;
+  }
+
+  function U(d) {
+    d = d.prefix;
+    void 0 !== d && (R = null, d ? 'function' !== typeof d ? w = 1 : (w = 2, R = d) : w = 0);
+    return U;
+  }
+
+  function B(d, c) {
+    var e = d;
+    33 > e.charCodeAt(0) && (e = e.trim());
+    V = e;
+    e = [V];
+
+    if (0 < A) {
+      var h = H(-1, c, e, e, D, z, 0, 0, 0, 0);
+      void 0 !== h && 'string' === typeof h && (c = h);
+    }
+
+    var a = M(O, e, c, 0, 0);
+    0 < A && (h = H(-2, a, e, e, D, z, a.length, 0, 0, 0), void 0 !== h && (a = h));
+    V = '';
+    E = 0;
+    z = D = 1;
+    return a;
+  }
+
+  var ca = /^\0+/g,
+      N = /[\0\r\f]/g,
+      aa = /: */g,
+      ka = /zoo|gra/,
+      ma = /([,: ])(transform)/g,
+      ia = /,\r+?/g,
+      F = /([\t\r\n ])*\f?&/g,
+      fa = /@(k\w+)\s*(\S*)\s*/,
+      Q = /::(place)/g,
+      ha = /:(read-only)/g,
+      G = /[svh]\w+-[tblr]{2}/,
+      da = /\(\s*(.*)\s*\)/g,
+      oa = /([\s\S]*?);/g,
+      ba = /-self|flex-/g,
+      na = /[^]*?(:[rp][el]a[\w-]+)[^]*/,
+      la = /stretch|:\s*\w+\-(?:conte|avail)/,
+      ja = /([^-])(image-set\()/,
+      z = 1,
+      D = 1,
+      E = 0,
+      w = 1,
+      O = [],
+      S = [],
+      A = 0,
+      R = null,
+      Y = 0,
+      V = '';
+  B.use = T;
+  B.set = U;
+  void 0 !== W && U(W);
+  return B;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (stylis_min);
+
+
+/***/ }),
+
+/***/ "./node_modules/@emotion/unitless/dist/unitless.browser.esm.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@emotion/unitless/dist/unitless.browser.esm.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var unitlessKeys = {
+  animationIterationCount: 1,
+  borderImageOutset: 1,
+  borderImageSlice: 1,
+  borderImageWidth: 1,
+  boxFlex: 1,
+  boxFlexGroup: 1,
+  boxOrdinalGroup: 1,
+  columnCount: 1,
+  columns: 1,
+  flex: 1,
+  flexGrow: 1,
+  flexPositive: 1,
+  flexShrink: 1,
+  flexNegative: 1,
+  flexOrder: 1,
+  gridRow: 1,
+  gridRowEnd: 1,
+  gridRowSpan: 1,
+  gridRowStart: 1,
+  gridColumn: 1,
+  gridColumnEnd: 1,
+  gridColumnSpan: 1,
+  gridColumnStart: 1,
+  msGridRow: 1,
+  msGridRowSpan: 1,
+  msGridColumn: 1,
+  msGridColumnSpan: 1,
+  fontWeight: 1,
+  lineHeight: 1,
+  opacity: 1,
+  order: 1,
+  orphans: 1,
+  tabSize: 1,
+  widows: 1,
+  zIndex: 1,
+  zoom: 1,
+  WebkitLineClamp: 1,
+  // SVG-related properties
+  fillOpacity: 1,
+  floodOpacity: 1,
+  stopOpacity: 1,
+  strokeDasharray: 1,
+  strokeDashoffset: 1,
+  strokeMiterlimit: 1,
+  strokeOpacity: 1,
+  strokeWidth: 1
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (unitlessKeys);
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -63651,6 +64393,1401 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-number-format/dist/react-number-format.es.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/react-number-format/dist/react-number-format.es.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * react-number-format - 4.5.5
+ * Author : Sudhanshu Yadav
+ * Copyright (c) 2016, 2021 to Sudhanshu Yadav, released under the MIT license.
+ * https://github.com/s-yadav/react-number-format
+ */
+
+
+
+function createCommonjsModule(fn, module) {
+	return module = { exports: {} }, fn(module, module.exports), module.exports;
+}
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+var ReactPropTypesSecret_1 = ReactPropTypesSecret;
+
+function emptyFunction() {}
+function emptyFunctionWithReset() {}
+emptyFunctionWithReset.resetWarningCache = emptyFunction;
+
+var factoryWithThrowingShims = function() {
+  function shim(props, propName, componentName, location, propFullName, secret) {
+    if (secret === ReactPropTypesSecret_1) {
+      // It is still safe when called from React.
+      return;
+    }
+    var err = new Error(
+      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+      'Use PropTypes.checkPropTypes() to call them. ' +
+      'Read more at http://fb.me/use-check-prop-types'
+    );
+    err.name = 'Invariant Violation';
+    throw err;
+  }  shim.isRequired = shim;
+  function getShim() {
+    return shim;
+  }  // Important!
+  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+  var ReactPropTypes = {
+    array: shim,
+    bool: shim,
+    func: shim,
+    number: shim,
+    object: shim,
+    string: shim,
+    symbol: shim,
+
+    any: shim,
+    arrayOf: getShim,
+    element: shim,
+    elementType: shim,
+    instanceOf: getShim,
+    node: shim,
+    objectOf: getShim,
+    oneOf: getShim,
+    oneOfType: getShim,
+    shape: getShim,
+    exact: getShim,
+
+    checkPropTypes: emptyFunctionWithReset,
+    resetWarningCache: emptyFunction
+  };
+
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+};
+
+var propTypes = createCommonjsModule(function (module) {
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+{
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = factoryWithThrowingShims();
+}
+});
+
+//     
+
+                                                               
+
+// basic noop function
+function noop() {}
+function returnTrue() {
+  return true;
+}
+
+function charIsNumber(char         ) {
+  return !!(char || '').match(/\d/);
+}
+
+function isNil(val     ) {
+  return val === null || val === undefined;
+}
+
+function escapeRegExp(str        ) {
+  return str.replace(/[-[\]/{}()*+?.\\^$|]/g, '\\$&');
+}
+
+function getThousandsGroupRegex(thousandsGroupStyle        ) {
+  switch (thousandsGroupStyle) {
+    case 'lakh':
+      return /(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/g;
+    case 'wan':
+      return /(\d)(?=(\d{4})+(?!\d))/g;
+    case 'thousand':
+    default:
+      return /(\d)(?=(\d{3})+(?!\d))/g;
+  }
+}
+
+function applyThousandSeparator(
+  str        ,
+  thousandSeparator        ,
+  thousandsGroupStyle        
+) {
+  var thousandsGroupRegex = getThousandsGroupRegex(thousandsGroupStyle);
+  var index = str.search(/[1-9]/);
+  index = index === -1 ? str.length : index;
+  return (
+    str.substring(0, index) +
+    str.substring(index, str.length).replace(thousandsGroupRegex, '$1' + thousandSeparator)
+  );
+}
+
+//spilt a float number into different parts beforeDecimal, afterDecimal, and negation
+function splitDecimal(numStr        , allowNegative) {
+  if ( allowNegative === void 0 ) allowNegative          = true;
+
+  var hasNagation = numStr[0] === '-';
+  var addNegation = hasNagation && allowNegative;
+  numStr = numStr.replace('-', '');
+
+  var parts = numStr.split('.');
+  var beforeDecimal = parts[0];
+  var afterDecimal = parts[1] || '';
+
+  return {
+    beforeDecimal: beforeDecimal,
+    afterDecimal: afterDecimal,
+    hasNagation: hasNagation,
+    addNegation: addNegation,
+  };
+}
+
+function fixLeadingZero(numStr         ) {
+  if (!numStr) { return numStr; }
+  var isNegative = numStr[0] === '-';
+  if (isNegative) { numStr = numStr.substring(1, numStr.length); }
+  var parts = numStr.split('.');
+  var beforeDecimal = parts[0].replace(/^0+/, '') || '0';
+  var afterDecimal = parts[1] || '';
+
+  return ("" + (isNegative ? '-' : '') + beforeDecimal + (afterDecimal ? ("." + afterDecimal) : ''));
+}
+
+/**
+ * limit decimal numbers to given scale
+ * Not used .fixedTo because that will break with big numbers
+ */
+function limitToScale(numStr        , scale        , fixedDecimalScale         ) {
+  var str = '';
+  var filler = fixedDecimalScale ? '0' : '';
+  for (var i = 0; i <= scale - 1; i++) {
+    str += numStr[i] || filler;
+  }
+  return str;
+}
+
+function repeat(str, count) {
+  return Array(count + 1).join(str)
+}
+
+function toNumericString(num) {  
+  num += ''; // typecast number to string
+
+  // store the sign and remove it from the number.
+  var sign = num[0] === '-' ? '-' : '';
+  if (sign) { num = num.substring(1); }
+
+  // split the number into cofficient and exponent
+  var ref = num.split(/[eE]/g);
+  var coefficient = ref[0];
+  var exponent = ref[1];
+
+  // covert exponent to number;
+  exponent = Number(exponent);
+
+  // if there is no exponent part or its 0, return the coffiecient with sign
+  if (!exponent) { return sign + coefficient; }
+
+  coefficient = coefficient.replace('.', '');
+
+  /**
+   * for scientific notation the current decimal index will be after first number (index 0)
+   * So effective decimal index will always be 1 + exponent value
+   */
+  var decimalIndex = 1 + exponent;
+
+  var coffiecientLn = coefficient.length;
+
+  if (decimalIndex < 0) {
+    // if decimal index is less then 0 add preceding 0s
+    // add 1 as join will have 
+    coefficient = '0.' + repeat('0', Math.abs(decimalIndex)) + coefficient;
+  } else if (decimalIndex >= coffiecientLn) {
+    // if decimal index is less then 0 add leading 0s
+    coefficient = coefficient + repeat('0', decimalIndex - coffiecientLn);
+  } else {
+    // else add decimal point at proper index
+    coefficient = (coefficient.substring(0, decimalIndex) || '0') + '.' + coefficient.substring(decimalIndex);
+  }
+
+  return sign + coefficient;
+}
+
+/**
+ * This method is required to round prop value to given scale.
+ * Not used .round or .fixedTo because that will break with big numbers
+ */
+function roundToPrecision(numStr        , scale        , fixedDecimalScale         ) {
+  //if number is empty don't do anything return empty string
+  if (['', '-'].indexOf(numStr) !== -1) { return numStr; }
+
+  var shoudHaveDecimalSeparator = numStr.indexOf('.') !== -1 && scale;
+  var ref = splitDecimal(numStr);
+  var beforeDecimal = ref.beforeDecimal;
+  var afterDecimal = ref.afterDecimal;
+  var hasNagation = ref.hasNagation;
+  var floatValue = parseFloat(("0." + (afterDecimal || '0')));
+  var floatValueStr =
+    afterDecimal.length <= scale ? toNumericString(floatValue) : floatValue.toFixed(scale);
+  var roundedDecimalParts = floatValueStr.split('.');
+  var intPart = beforeDecimal
+    .split('')
+    .reverse()
+    .reduce(function (roundedStr, current, idx) {
+      if (roundedStr.length > idx) {
+        return (
+          (Number(roundedStr[0]) + Number(current)).toString() +
+          roundedStr.substring(1, roundedStr.length)
+        );
+      }
+      return current + roundedStr;
+    }, roundedDecimalParts[0]);
+
+  var decimalPart = limitToScale(
+    roundedDecimalParts[1] || '',
+    Math.min(scale, afterDecimal.length),
+    fixedDecimalScale
+  );
+  var negation = hasNagation ? '-' : '';
+  var decimalSeparator = shoudHaveDecimalSeparator ? '.' : '';
+  return ("" + negation + intPart + decimalSeparator + decimalPart);
+}
+
+function omit(obj        , keyMaps        ) {
+  var filteredObj = {};
+  Object.keys(obj).forEach(function (key) {
+    if (!keyMaps[key]) { filteredObj[key] = obj[key]; }
+  });
+  return filteredObj;
+}
+
+/** set the caret positon in an input field **/
+function setCaretPosition(el                  , caretPos        ) {
+  el.value = el.value;
+  // ^ this is used to not only get 'focus', but
+  // to make sure we don't have it everything -selected-
+  // (it causes an issue in chrome, and having it doesn't hurt any other browser)
+  if (el !== null) {
+    if (el.createTextRange) {
+      var range = el.createTextRange();
+      range.move('character', caretPos);
+      range.select();
+      return true;
+    }
+    // (el.selectionStart === 0 added for Firefox bug)
+    if (el.selectionStart || el.selectionStart === 0) {
+      el.focus();
+      el.setSelectionRange(caretPos, caretPos);
+      return true;
+    }
+
+    // fail city, fortunately this never happens (as far as I've tested) :)
+    el.focus();
+    return false;
+  }
+}
+
+/**
+  Given previous value and newValue it returns the index
+  start - end to which values have changed.
+  This function makes assumption about only consecutive
+  characters are changed which is correct assumption for caret input.
+*/
+function findChangedIndex(prevValue        , newValue        ) {
+  var i = 0,
+    j = 0;
+  var prevLength = prevValue.length;
+  var newLength = newValue.length;
+  while (prevValue[i] === newValue[i] && i < prevLength) { i++; }
+
+  //check what has been changed from last
+  while (
+    prevValue[prevLength - 1 - j] === newValue[newLength - 1 - j] &&
+    newLength - j > i &&
+    prevLength - j > i
+  ) {
+    j++;
+  }
+
+  return { start: i, end: prevLength - j };
+}
+
+/*
+  Returns a number whose value is limited to the given range
+*/
+function clamp(num        , min        , max        ) {
+  return Math.min(Math.max(num, min), max);
+}
+
+function getCurrentCaretPosition(el                  ) {
+  /*Max of selectionStart and selectionEnd is taken for the patch of pixel and other mobile device caret bug*/
+  return Math.max(el.selectionStart, el.selectionEnd);
+}
+
+function addInputMode(format                                   ) {
+  return format || !(navigator.platform && /iPhone|iPod/.test(navigator.platform));
+}
+
+//     
+
+
+var propTypes$1 = {
+  thousandSeparator: propTypes.oneOfType([propTypes.string, propTypes.oneOf([true])]),
+  decimalSeparator: propTypes.string,
+  allowedDecimalSeparators: propTypes.arrayOf(propTypes.string),
+  thousandsGroupStyle: propTypes.oneOf(['thousand', 'lakh', 'wan']),
+  decimalScale: propTypes.number,
+  fixedDecimalScale: propTypes.bool,
+  displayType: propTypes.oneOf(['input', 'text']),
+  prefix: propTypes.string,
+  suffix: propTypes.string,
+  format: propTypes.oneOfType([
+    propTypes.string,
+    propTypes.func
+  ]),
+  removeFormatting: propTypes.func,
+  mask: propTypes.oneOfType([propTypes.string, propTypes.arrayOf(propTypes.string)]),
+  value: propTypes.oneOfType([
+    propTypes.number,
+    propTypes.string
+  ]),
+  defaultValue: propTypes.oneOfType([
+    propTypes.number,
+    propTypes.string
+  ]),
+  isNumericString: propTypes.bool,
+  customInput: propTypes.elementType,
+  allowNegative: propTypes.bool,
+  allowEmptyFormatting: propTypes.bool,
+  allowLeadingZeros: propTypes.bool,
+  onValueChange: propTypes.func,
+  onKeyDown: propTypes.func,
+  onMouseUp: propTypes.func,
+  onChange: propTypes.func,
+  onFocus: propTypes.func,
+  onBlur: propTypes.func,
+  type: propTypes.oneOf(['text', 'tel', 'password']),
+  isAllowed: propTypes.func,
+  renderText: propTypes.func,
+  getInputRef: propTypes.oneOfType([
+    propTypes.func, // for legacy refs
+    propTypes.shape({ current: propTypes.any })
+  ])
+};
+
+var defaultProps = {
+  displayType: 'input',
+  decimalSeparator: '.',
+  thousandsGroupStyle: 'thousand',
+  fixedDecimalScale: false,
+  prefix: '',
+  suffix: '',
+  allowNegative: true,
+  allowEmptyFormatting: false,
+  allowLeadingZeros: false,
+  isNumericString: false,
+  type: 'text',
+  onValueChange: noop,
+  onChange: noop,
+  onKeyDown: noop,
+  onMouseUp: noop,
+  onFocus: noop,
+  onBlur: noop,
+  isAllowed: returnTrue
+};
+var NumberFormat = /*@__PURE__*/(function (superclass) {
+  function NumberFormat(props        ) {
+    superclass.call(this, props);
+
+    var defaultValue = props.defaultValue;
+
+    //validate props
+    this.validateProps();
+
+    var formattedValue = this.formatValueProp(defaultValue);
+
+    this.state = {
+      value: formattedValue,
+      numAsString: this.removeFormatting(formattedValue),
+      mounted: false,
+    };
+
+    this.selectionBeforeInput = {
+      selectionStart: 0,
+      selectionEnd: 0
+    };
+
+    this.onChange = this.onChange.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
+    this.onMouseUp = this.onMouseUp.bind(this);
+    this.onFocus = this.onFocus.bind(this);
+    this.onBlur = this.onBlur.bind(this);
+  }
+
+  if ( superclass ) NumberFormat.__proto__ = superclass;
+  NumberFormat.prototype = Object.create( superclass && superclass.prototype );
+  NumberFormat.prototype.constructor = NumberFormat;
+
+  NumberFormat.prototype.componentDidMount = function componentDidMount () {
+    // set mounted state
+    // eslint-disable-next-line react/no-did-mount-set-state
+    this.setState({
+      mounted: true
+    });
+  };
+
+  NumberFormat.prototype.componentDidUpdate = function componentDidUpdate (prevProps        ) {
+    this.updateValueIfRequired(prevProps);
+  };
+
+  NumberFormat.prototype.componentWillUnmount = function componentWillUnmount () {
+    clearTimeout(this.focusTimeout);
+  };
+
+  NumberFormat.prototype.updateValueIfRequired = function updateValueIfRequired (prevProps        ) {
+    var ref = this;
+    var props = ref.props;
+    var state = ref.state;
+    var focusedElm = ref.focusedElm;
+    var stateValue = state.value;
+    var lastNumStr = state.numAsString; if ( lastNumStr === void 0 ) lastNumStr = '';
+
+    // If only state changed no need to do any thing
+    if(prevProps !== props) {
+      //validate props
+      this.validateProps();
+
+      var lastValueWithNewFormat = this.formatNumString(lastNumStr);
+
+      var formattedValue = isNil(props.value) ? lastValueWithNewFormat : this.formatValueProp();
+      var numAsString = this.removeFormatting(formattedValue);
+
+      var floatValue = parseFloat(numAsString);
+      var lastFloatValue = parseFloat(lastNumStr);
+
+      if (
+        //while typing set state only when float value changes
+        ((!isNaN(floatValue) || !isNaN(lastFloatValue)) && floatValue !== lastFloatValue) ||
+        //can also set state when float value is same and the format props changes
+        lastValueWithNewFormat !== stateValue ||
+        //set state always when not in focus and formatted value is changed
+        (focusedElm === null && formattedValue !== stateValue)
+      ) {
+        this.updateValue({ formattedValue: formattedValue, numAsString: numAsString, input: focusedElm });
+      }
+    }
+  };
+
+  /** Misc methods **/
+  NumberFormat.prototype.getFloatString = function getFloatString (num) {
+    if ( num === void 0 ) num         = '';
+
+    var ref = this.props;
+    var decimalScale = ref.decimalScale;
+    var ref$1 = this.getSeparators();
+    var decimalSeparator = ref$1.decimalSeparator;
+    var numRegex = this.getNumberRegex(true);
+
+    //remove negation for regex check
+    var hasNegation = num[0] === '-';
+    if(hasNegation) { num = num.replace('-', ''); }
+
+    //if decimal scale is zero remove decimal and number after decimalSeparator
+    if (decimalSeparator && decimalScale === 0) {
+      num = num.split(decimalSeparator)[0];
+    }
+
+    num  = (num.match(numRegex) || []).join('').replace(decimalSeparator, '.');
+
+    //remove extra decimals
+    var firstDecimalIndex = num.indexOf('.');
+
+    if (firstDecimalIndex !== -1) {
+      num = (num.substring(0, firstDecimalIndex)) + "." + (num.substring(firstDecimalIndex + 1, num.length).replace(new RegExp(escapeRegExp(decimalSeparator), 'g'), ''));
+    }
+
+    //add negation back
+    if(hasNegation) { num = '-' + num; }
+
+    return num;
+  };
+
+  //returned regex assumes decimalSeparator is as per prop
+  NumberFormat.prototype.getNumberRegex = function getNumberRegex (g         , ignoreDecimalSeparator          ) {
+    var ref = this.props;
+    var format = ref.format;
+    var decimalScale = ref.decimalScale;
+    var ref$1 = this.getSeparators();
+    var decimalSeparator = ref$1.decimalSeparator;
+    return new RegExp('\\d' + (decimalSeparator && decimalScale !== 0 && !ignoreDecimalSeparator && !format ? '|' + escapeRegExp(decimalSeparator) : ''), g ? 'g' : undefined);
+  };
+
+  NumberFormat.prototype.getSeparators = function getSeparators () {
+    var ref = this.props;
+    var decimalSeparator = ref.decimalSeparator;
+    var ref$1 = this.props;
+    var thousandSeparator = ref$1.thousandSeparator;
+    var allowedDecimalSeparators = ref$1.allowedDecimalSeparators;
+
+    if (thousandSeparator === true) {
+      thousandSeparator = ',';
+    }
+    if (!allowedDecimalSeparators) {
+      allowedDecimalSeparators = [decimalSeparator, '.'];
+    }
+
+    return {
+      decimalSeparator: decimalSeparator,
+      thousandSeparator: thousandSeparator,
+      allowedDecimalSeparators: allowedDecimalSeparators,
+    }
+  };
+
+  NumberFormat.prototype.getMaskAtIndex = function getMaskAtIndex (index        ) {
+    var ref = this.props;
+    var mask = ref.mask; if ( mask === void 0 ) mask = ' ';
+    if (typeof mask === 'string') {
+      return mask;
+    }
+
+    return mask[index] || ' ';
+  };
+
+  NumberFormat.prototype.getValueObject = function getValueObject (formattedValue        , numAsString        ) {
+    var floatValue = parseFloat(numAsString);
+
+    return {
+      formattedValue: formattedValue,
+      value: numAsString,
+      floatValue: isNaN(floatValue) ? undefined : floatValue
+    };
+
+  };
+
+  NumberFormat.prototype.validateProps = function validateProps () {
+    var ref = this.props;
+    var mask = ref.mask;
+
+    //validate decimalSeparator and thousandSeparator
+    var ref$1 = this.getSeparators();
+    var decimalSeparator = ref$1.decimalSeparator;
+    var thousandSeparator = ref$1.thousandSeparator;
+
+    if (decimalSeparator === thousandSeparator) {
+      throw new Error(("\n          Decimal separator can't be same as thousand separator.\n          thousandSeparator: " + thousandSeparator + " (thousandSeparator = {true} is same as thousandSeparator = \",\")\n          decimalSeparator: " + decimalSeparator + " (default value for decimalSeparator is .)\n       "));
+    }
+
+    //validate mask
+    if (mask) {
+      var maskAsStr = mask === 'string' ? mask : mask.toString();
+      if (maskAsStr.match(/\d/g)) {
+        throw new Error(("\n          Mask " + mask + " should not contain numeric character;\n        "))
+      }
+    }
+
+  };
+  /** Misc methods end **/
+
+  /** caret specific methods **/
+  NumberFormat.prototype.setPatchedCaretPosition = function setPatchedCaretPosition (el                  , caretPos        , currentValue        ) {
+    /* setting caret position within timeout of 0ms is required for mobile chrome,
+    otherwise browser resets the caret position after we set it
+    We are also setting it without timeout so that in normal browser we don't see the flickering */
+    setCaretPosition(el, caretPos);
+    setTimeout(function () {
+      if(el.value === currentValue) { setCaretPosition(el, caretPos); }
+    }, 0);
+  };
+
+  /* This keeps the caret within typing area so people can't type in between prefix or suffix */
+  NumberFormat.prototype.correctCaretPosition = function correctCaretPosition (value        , caretPos        , direction         ) {
+    var ref = this.props;
+    var prefix = ref.prefix;
+    var suffix = ref.suffix;
+    var format = ref.format;
+
+    //if value is empty return 0
+    if (value === '') { return 0; }
+
+    //caret position should be between 0 and value length
+    caretPos = clamp(caretPos, 0, value.length);
+
+    //in case of format as number limit between prefix and suffix
+    if (!format) {
+      var hasNegation = value[0] === '-';
+      return clamp(caretPos, prefix.length + (hasNegation ? 1 : 0), value.length - suffix.length);
+    }
+
+    //in case if custom format method don't do anything
+    if (typeof format === 'function') { return caretPos; }
+
+    /* in case format is string find the closest # position from the caret position */
+
+    //in case the caretPos have input value on it don't do anything
+    if (format[caretPos] === '#' && charIsNumber(value[caretPos])) { return caretPos; }
+
+    //if caretPos is just after input value don't do anything
+    if (format[caretPos - 1] === '#' && charIsNumber(value[caretPos - 1])) { return caretPos; }
+
+    //find the nearest caret position
+    var firstHashPosition = format.indexOf('#');
+    var lastHashPosition = format.lastIndexOf('#');
+
+    //limit the cursor between the first # position and the last # position
+    caretPos = clamp(caretPos, firstHashPosition, lastHashPosition + 1);
+
+    var nextPos = format.substring(caretPos, format.length).indexOf('#');
+    var caretLeftBound = caretPos;
+    var caretRightBound = caretPos + (nextPos === -1 ? 0 : nextPos);
+
+    //get the position where the last number is present
+    while (caretLeftBound > firstHashPosition && (format[caretLeftBound] !== '#' || !charIsNumber(value[caretLeftBound]))) {
+      caretLeftBound -= 1;
+    }
+
+    var goToLeft = !charIsNumber(value[caretRightBound])
+    || (direction === 'left' && caretPos !== firstHashPosition)
+    || (caretPos - caretLeftBound < caretRightBound - caretPos);
+
+    if (goToLeft) {
+      //check if number should be taken after the bound or after it
+      //if number preceding a valid number keep it after
+      return charIsNumber(value[caretLeftBound]) ? caretLeftBound + 1 : caretLeftBound;
+    }
+
+    return caretRightBound;
+  };
+
+  NumberFormat.prototype.getCaretPosition = function getCaretPosition (inputValue        , formattedValue        , caretPos        ) {
+    var ref = this.props;
+    var format = ref.format;
+    var stateValue = this.state.value;
+    var numRegex = this.getNumberRegex(true);
+    var inputNumber = (inputValue.match(numRegex) || []).join('');
+    var formattedNumber = (formattedValue.match(numRegex) || []).join('');
+    var j, i;
+
+    j = 0;
+
+    for(i=0; i<caretPos; i++){
+      var currentInputChar = inputValue[i] || '';
+      var currentFormatChar = formattedValue[j] || '';
+      //no need to increase new cursor position if formatted value does not have those characters
+      //case inputValue = 1a23 and formattedValue =  123
+      if(!currentInputChar.match(numRegex) && currentInputChar !== currentFormatChar) { continue; }
+
+      //When we are striping out leading zeros maintain the new cursor position
+      //Case inputValue = 00023 and formattedValue = 23;
+      if (currentInputChar === '0' && currentFormatChar.match(numRegex) && currentFormatChar !== '0' && inputNumber.length !== formattedNumber.length) { continue; }
+
+      //we are not using currentFormatChar because j can change here
+      while(currentInputChar !== formattedValue[j] && j < formattedValue.length) { j++; }
+      j++;
+    }
+
+    if ((typeof format === 'string' && !stateValue)) {
+      //set it to the maximum value so it goes after the last number
+      j = formattedValue.length;
+    }
+
+    //correct caret position if its outside of editable area
+    j = this.correctCaretPosition(formattedValue, j);
+
+    return j;
+  };
+  /** caret specific methods ends **/
+
+
+  /** methods to remove formattting **/
+  NumberFormat.prototype.removePrefixAndSuffix = function removePrefixAndSuffix (val        ) {
+    var ref = this.props;
+    var format = ref.format;
+    var prefix = ref.prefix;
+    var suffix = ref.suffix;
+
+    //remove prefix and suffix
+    if (!format && val) {
+      var isNegative = val[0] === '-';
+
+      //remove negation sign
+      if (isNegative) { val = val.substring(1, val.length); }
+
+      //remove prefix
+      val = prefix && val.indexOf(prefix) === 0 ? val.substring(prefix.length, val.length) : val;
+
+      //remove suffix
+      var suffixLastIndex = val.lastIndexOf(suffix);
+      val = suffix && suffixLastIndex !== -1 && suffixLastIndex === val.length - suffix.length ? val.substring(0, suffixLastIndex) : val;
+
+      //add negation sign back
+      if (isNegative) { val = '-' + val; }
+    }
+
+    return val;
+  };
+
+  NumberFormat.prototype.removePatternFormatting = function removePatternFormatting (val        ) {
+    var ref = this.props;
+    var format = ref.format;
+    var formatArray = format.split('#').filter(function (str) { return str !== ''; });
+    var start = 0;
+    var numStr = '';
+
+    for (var i=0, ln=formatArray.length; i <= ln; i++) {
+      var part = formatArray[i] || '';
+
+      //if i is the last fragment take the index of end of the value
+      //For case like +1 (911) 911 91 91 having pattern +1 (###) ### ## ##
+      var index = i === ln ? val.length : val.indexOf(part, start);
+
+      /* in any case if we don't find the pattern part in the value assume the val as numeric string
+      This will be also in case if user has started typing, in any other case it will not be -1
+      unless wrong prop value is provided */
+      if (index === -1) {
+        numStr = val;
+        break;
+      } else {
+        numStr += val.substring(start, index);
+        start = index + part.length;
+      }
+    }
+
+    return (numStr.match(/\d/g) || []).join('');
+  };
+
+  NumberFormat.prototype.removeFormatting = function removeFormatting (val        ) {
+    var ref = this.props;
+    var format = ref.format;
+    var removeFormatting = ref.removeFormatting;
+    if (!val) { return val; }
+
+    if (!format) {
+      val = this.removePrefixAndSuffix(val);
+      val = this.getFloatString(val);
+    } else if (typeof format === 'string') {
+      val = this.removePatternFormatting(val);
+    } else if (typeof removeFormatting === 'function') { //condition need to be handled if format method is provide,
+      val = removeFormatting(val);
+    } else {
+      val = (val.match(/\d/g) || []).join('');
+    }
+    return val;
+  };
+  /** methods to remove formattting end **/
+
+
+  /*** format specific methods start ***/
+  /**
+   * Format when # based string is provided
+   * @param  {string} numStr Numeric String
+   * @return {string}        formatted Value
+   */
+  NumberFormat.prototype.formatWithPattern = function formatWithPattern (numStr        ) {
+    var ref = this.props;
+    var format = ref.format;
+    var hashCount = 0;
+    var formattedNumberAry = format.split('');
+    for (var i = 0, ln = format.length; i < ln; i++) {
+      if (format[i] === '#') {
+        formattedNumberAry[i] = numStr[hashCount] || this.getMaskAtIndex(hashCount);
+        hashCount += 1;
+      }
+    }
+    return formattedNumberAry.join('');
+  };
+  /**
+   * @param  {string} numStr Numeric string/floatString] It always have decimalSeparator as .
+   * @return {string} formatted Value
+   */
+  NumberFormat.prototype.formatAsNumber = function formatAsNumber (numStr        ) {
+    var ref = this.props;
+    var decimalScale = ref.decimalScale;
+    var fixedDecimalScale = ref.fixedDecimalScale;
+    var prefix = ref.prefix;
+    var suffix = ref.suffix;
+    var allowNegative = ref.allowNegative;
+    var thousandsGroupStyle = ref.thousandsGroupStyle;
+    var ref$1 = this.getSeparators();
+    var thousandSeparator = ref$1.thousandSeparator;
+    var decimalSeparator = ref$1.decimalSeparator;
+
+    var hasDecimalSeparator = numStr.indexOf('.') !== -1 || (decimalScale && fixedDecimalScale);
+    var ref$2 = splitDecimal(numStr, allowNegative);
+    var beforeDecimal = ref$2.beforeDecimal;
+    var afterDecimal = ref$2.afterDecimal;
+    var addNegation = ref$2.addNegation; // eslint-disable-line prefer-const
+
+    //apply decimal precision if its defined
+    if (decimalScale !== undefined) { afterDecimal = limitToScale(afterDecimal, decimalScale, fixedDecimalScale); }
+
+    if(thousandSeparator) {
+      beforeDecimal = applyThousandSeparator(beforeDecimal, thousandSeparator, thousandsGroupStyle);
+    }
+
+    //add prefix and suffix
+    if(prefix) { beforeDecimal = prefix + beforeDecimal; }
+    if(suffix) { afterDecimal = afterDecimal + suffix; }
+
+    //restore negation sign
+    if (addNegation) { beforeDecimal = '-' + beforeDecimal; }
+
+    numStr = beforeDecimal + (hasDecimalSeparator && decimalSeparator ||  '') + afterDecimal;
+
+    return numStr;
+  };
+
+  NumberFormat.prototype.formatNumString = function formatNumString (numStr) {
+    if ( numStr === void 0 ) numStr         = '';
+
+    var ref = this.props;
+    var format = ref.format;
+    var allowEmptyFormatting = ref.allowEmptyFormatting;
+    var formattedValue = numStr;
+
+    if (numStr === '' && !allowEmptyFormatting) {
+      formattedValue = '';
+    } else if (numStr === '-' && !format) {
+      formattedValue = '-';
+    } else if (typeof format === 'string') {
+      formattedValue = this.formatWithPattern(formattedValue);
+    } else if (typeof format === 'function') {
+      formattedValue = format(formattedValue);
+    } else {
+      formattedValue = this.formatAsNumber(formattedValue);
+    }
+
+    return formattedValue;
+  };
+
+  NumberFormat.prototype.formatValueProp = function formatValueProp (defaultValue               ) {
+    var ref = this.props;
+    var format = ref.format;
+    var decimalScale = ref.decimalScale;
+    var fixedDecimalScale = ref.fixedDecimalScale;
+    var allowEmptyFormatting = ref.allowEmptyFormatting;
+    var ref$1 = this.props;
+    var value = ref$1.value;
+    var isNumericString = ref$1.isNumericString;
+
+    // if value is undefined or null, use defaultValue instead
+    value = isNil(value) ? defaultValue : value;
+
+    var isNonNumericFalsy = !value && value !== 0;
+
+    if (isNonNumericFalsy && allowEmptyFormatting) {
+      value = '';
+    }
+
+    // if value is not defined return empty string
+    if (isNonNumericFalsy && !allowEmptyFormatting) { return ''; }
+
+    if (typeof value === 'number') {
+      value = toNumericString(value);
+      isNumericString = true;
+    }
+
+    //change infinity value to empty string
+    if (value === 'Infinity' && isNumericString) {
+      value = '';
+    }
+
+    //round the number based on decimalScale
+    //format only if non formatted value is provided
+    if (isNumericString && !format && typeof decimalScale === 'number') {
+      value = roundToPrecision(value, decimalScale, fixedDecimalScale);
+    }
+
+    var formattedValue = isNumericString ? this.formatNumString(value) : this.formatInput(value);
+
+    return formattedValue;
+  };
+
+  NumberFormat.prototype.formatNegation = function formatNegation (value) {
+    if ( value === void 0 ) value         = '';
+
+    var ref = this.props;
+    var allowNegative = ref.allowNegative;
+    var negationRegex = new RegExp('(-)');
+    var doubleNegationRegex = new RegExp('(-)(.)*(-)');
+
+    // Check number has '-' value
+    var hasNegation = negationRegex.test(value);
+
+    // Check number has 2 or more '-' values
+    var removeNegation = doubleNegationRegex.test(value);
+
+    //remove negation
+    value = value.replace(/-/g, '');
+
+    if (hasNegation && !removeNegation && allowNegative) {
+      value = '-' + value;
+    }
+
+    return value;
+  };
+
+  NumberFormat.prototype.formatInput = function formatInput (value) {
+    if ( value === void 0 ) value         = '';
+
+    var ref = this.props;
+    var format = ref.format;
+
+    //format negation only if we are formatting as number
+    if (!format) {
+      value = this.removePrefixAndSuffix(value);
+      value = this.formatNegation(value);
+    }
+
+    //remove formatting from number
+    value = this.removeFormatting(value);
+
+    return this.formatNumString(value);
+  };
+
+  /*** format specific methods end ***/
+  NumberFormat.prototype.isCharacterAFormat = function isCharacterAFormat (caretPos        , value        ) {
+    var ref = this.props;
+    var format = ref.format;
+    var prefix = ref.prefix;
+    var suffix = ref.suffix;
+    var decimalScale = ref.decimalScale;
+    var fixedDecimalScale = ref.fixedDecimalScale;
+    var ref$1 = this.getSeparators();
+    var decimalSeparator = ref$1.decimalSeparator;
+
+    //check within format pattern
+    if (typeof format === 'string' && format[caretPos] !== '#') { return true; }
+
+    //check in number format
+    if (!format && (caretPos < prefix.length
+      || caretPos >= value.length - suffix.length
+      || (decimalScale && fixedDecimalScale && value[caretPos] === decimalSeparator))
+    ) {
+      return true;
+    }
+
+    return false;
+  };
+
+  NumberFormat.prototype.checkIfFormatGotDeleted = function checkIfFormatGotDeleted (start        , end        , value        ) {
+    for (var i = start; i < end; i++) {
+      if (this.isCharacterAFormat(i, value)) { return true; }
+    }
+    return false;
+  };
+
+  /**
+   * This will check if any formatting got removed by the delete or backspace and reset the value
+   * It will also work as fallback if android chome keyDown handler does not work
+   **/
+  NumberFormat.prototype.correctInputValue = function correctInputValue (caretPos        , lastValue        , value        ) {
+    var ref = this.props;
+    var format = ref.format;
+    var allowNegative = ref.allowNegative;
+    var prefix = ref.prefix;
+    var suffix = ref.suffix;
+    var decimalScale = ref.decimalScale;
+    var ref$1 = this.getSeparators();
+    var allowedDecimalSeparators = ref$1.allowedDecimalSeparators;
+    var decimalSeparator = ref$1.decimalSeparator;
+    var lastNumStr = this.state.numAsString || '';
+    var ref$2 = this.selectionBeforeInput;
+    var selectionStart = ref$2.selectionStart;
+    var selectionEnd = ref$2.selectionEnd;
+    var ref$3 = findChangedIndex(lastValue, value);
+    var start = ref$3.start;
+    var end = ref$3.end;
+
+    /** Check for any allowed decimal separator is added in the numeric format and replace it with decimal separator */
+    if (!format && start === end && allowedDecimalSeparators.indexOf(value[selectionStart]) !== -1  ) {
+      var separator = decimalScale === 0 ? '' : decimalSeparator;
+      return value.substr(0, selectionStart) + separator + value.substr(selectionStart + 1, value.length);
+    }
+
+
+    var leftBound = !!format ? 0 : prefix.length;
+    var rightBound = lastValue.length - (!!format ? 0 : suffix.length);
+
+    if (
+      // don't do anything if something got added
+      value.length > lastValue.length ||
+      // or if the new value is an empty string 
+      !value.length ||
+      // or if nothing has changed, in which case start will be same as end
+      start === end ||
+      // or in case if whole input is selected and new value is typed
+      (selectionStart === 0 && selectionEnd === lastValue.length) ||
+      // or in case if the whole content is replaced by browser, example (autocomplete)
+      (start === 0 && end === lastValue.length) ||
+      // or if charcters between prefix and suffix is selected. 
+      // For numeric inputs we apply the format so, prefix and suffix can be ignored
+      (selectionStart === leftBound && selectionEnd === rightBound)
+    ) {
+      return value;
+    }
+
+    //if format got deleted reset the value to last value
+    if (this.checkIfFormatGotDeleted(start, end, lastValue)) {
+      value = lastValue;
+    }
+
+    //for numbers check if beforeDecimal got deleted and there is nothing after decimal,
+    //clear all numbers in such case while keeping the - sign
+    if (!format) {
+      var numericString = this.removeFormatting(value);
+      var ref$4 = splitDecimal(numericString, allowNegative);
+      var beforeDecimal = ref$4.beforeDecimal;
+      var afterDecimal = ref$4.afterDecimal;
+      var addNegation = ref$4.addNegation; // eslint-disable-line prefer-const
+
+      //clear only if something got deleted
+      var isBeforeDecimalPoint = caretPos < value.indexOf(decimalSeparator) + 1;
+      if (numericString.length < lastNumStr.length && isBeforeDecimalPoint && beforeDecimal === '' && !parseFloat(afterDecimal)) {
+        return addNegation ? '-' : '';
+      }
+    }
+
+    return value;
+  };
+
+  /** Update value and caret position */
+  NumberFormat.prototype.updateValue = function updateValue (params   
+                             
+                          
+                         
+                              
+                       
+                                
+     
+  ) {
+    var formattedValue = params.formattedValue;
+    var input = params.input;
+    var setCaretPosition = params.setCaretPosition; if ( setCaretPosition === void 0 ) setCaretPosition = true;
+    var numAsString = params.numAsString;
+    var caretPos = params.caretPos;
+    var ref = this.props;
+    var onValueChange = ref.onValueChange;
+    var ref$1 = this.state;
+    var lastValue = ref$1.value;
+
+    if (input) {
+      //set caret position, and value imperatively when element is provided
+      if (setCaretPosition) {
+
+        //calculate caret position if not defined
+        if (!caretPos) {
+          var inputValue = params.inputValue || input.value;
+
+          var currentCaretPosition = getCurrentCaretPosition(input);
+
+          /**
+           * set the value imperatively, this is required for IE fix
+           * This is also required as if new caret position is beyond the previous value.
+           * Caret position will not be set correctly
+           */
+          input.value = formattedValue;
+
+          //get the caret position
+          caretPos = this.getCaretPosition(inputValue, formattedValue, currentCaretPosition);
+        }
+
+        //set caret position
+        this.setPatchedCaretPosition(input, caretPos, formattedValue);
+      } else {
+        /**
+         * if we are not setting caret position set the value imperatively.
+         * This is required on onBlur method
+         */
+        input.value = formattedValue;
+      }
+    }
+
+
+    //calculate numeric string if not passed
+    if (numAsString === undefined) {
+      numAsString = this.removeFormatting(formattedValue);
+    }
+
+    //update state if value is changed
+    if (formattedValue !== lastValue) {
+      this.setState({ value : formattedValue, numAsString: numAsString });
+
+      // trigger onValueChange synchronously, so parent is updated along with the number format. Fix for #277, #287
+      onValueChange(this.getValueObject(formattedValue, numAsString));
+    }
+  };
+
+  NumberFormat.prototype.onChange = function onChange (e                     ) {
+    var el = e.target;
+    var inputValue = el.value;
+    var ref = this;
+    var state = ref.state;
+    var props = ref.props;
+    var isAllowed = props.isAllowed;
+    var lastValue = state.value || '';
+
+    var currentCaretPosition = getCurrentCaretPosition(el);
+
+    inputValue =  this.correctInputValue(currentCaretPosition, lastValue, inputValue);
+
+    var formattedValue = this.formatInput(inputValue) || '';
+    var numAsString = this.removeFormatting(formattedValue);
+
+    var valueObj = this.getValueObject(formattedValue, numAsString);
+    var isChangeAllowed = isAllowed(valueObj);
+
+    if (!isChangeAllowed) {
+      formattedValue = lastValue;
+    }
+
+    this.updateValue({ formattedValue: formattedValue, numAsString: numAsString, inputValue: inputValue, input: el });
+
+    if(isChangeAllowed) {
+      props.onChange(e);
+    }
+  };
+
+  NumberFormat.prototype.onBlur = function onBlur (e                     ) {
+    var ref = this;
+    var props = ref.props;
+    var state = ref.state;
+    var format = props.format;
+    var onBlur = props.onBlur;
+    var allowLeadingZeros = props.allowLeadingZeros;
+    var numAsString = state.numAsString;
+    var lastValue = state.value;
+    this.focusedElm = null;
+
+    clearTimeout(this.focusTimeout);
+
+
+    if (!format) {
+      // if the numAsString is not a valid number reset it to empty
+      if (isNaN(parseFloat(numAsString))) {
+        numAsString = '';
+      }
+
+      if (!allowLeadingZeros) {
+        numAsString = fixLeadingZero(numAsString);
+      }
+
+      var formattedValue = this.formatNumString(numAsString);
+
+      //change the state
+      if (formattedValue !== lastValue) {
+        // the event needs to be persisted because its properties can be accessed in an asynchronous way
+        this.updateValue({ formattedValue: formattedValue, numAsString: numAsString, input: e.target, setCaretPosition: false });
+        onBlur(e);
+        return;
+      }
+    }
+    onBlur(e);
+  };
+
+  NumberFormat.prototype.onKeyDown = function onKeyDown (e                             ) {
+    var el = e.target;
+    var key = e.key;
+    var selectionStart = el.selectionStart;
+    var selectionEnd = el.selectionEnd;
+    var value = el.value; if ( value === void 0 ) value = '';
+    var expectedCaretPosition;
+    var ref = this.props;
+    var decimalScale = ref.decimalScale;
+    var fixedDecimalScale = ref.fixedDecimalScale;
+    var prefix = ref.prefix;
+    var suffix = ref.suffix;
+    var format = ref.format;
+    var onKeyDown = ref.onKeyDown;
+    var ignoreDecimalSeparator = decimalScale !== undefined && fixedDecimalScale;
+    var numRegex = this.getNumberRegex(false, ignoreDecimalSeparator);
+    var negativeRegex = new RegExp('-');
+    var isPatternFormat = typeof format === 'string';
+
+    this.selectionBeforeInput = {
+      selectionStart: selectionStart,
+      selectionEnd: selectionEnd
+    };
+
+    //Handle backspace and delete against non numerical/decimal characters or arrow keys
+    if (key === 'ArrowLeft' || key === 'Backspace') {
+      expectedCaretPosition = selectionStart - 1;
+    } else if (key === 'ArrowRight') {
+      expectedCaretPosition = selectionStart + 1;
+    } else if (key === 'Delete') {
+      expectedCaretPosition = selectionStart;
+    }
+
+    //if expectedCaretPosition is not set it means we don't want to Handle keyDown
+    //also if multiple characters are selected don't handle
+    if (expectedCaretPosition === undefined || selectionStart !== selectionEnd) {
+      onKeyDown(e);
+      return;
+    }
+
+    var newCaretPosition = expectedCaretPosition;
+    var leftBound = isPatternFormat ? format.indexOf('#') : prefix.length;
+    var rightBound = isPatternFormat ? format.lastIndexOf('#') + 1 : value.length - suffix.length;
+
+    if (key === 'ArrowLeft' || key === 'ArrowRight') {
+      var direction = key === 'ArrowLeft' ? 'left' : 'right';
+      newCaretPosition = this.correctCaretPosition(value, expectedCaretPosition, direction);
+    } else if (key === 'Delete' && !numRegex.test(value[expectedCaretPosition]) && !negativeRegex.test(value[expectedCaretPosition])) {
+      while (!numRegex.test(value[newCaretPosition]) && newCaretPosition < rightBound) { newCaretPosition++; }
+    } else if (key === 'Backspace' && !numRegex.test(value[expectedCaretPosition])) {
+      /* NOTE: This is special case when backspace is pressed on a
+      negative value while the cursor position is after prefix. We can't handle it on onChange because
+      we will not have any information of keyPress
+      */
+      if (selectionStart <= leftBound + 1 && value[0] === '-' && typeof format === 'undefined') {
+        var newValue = value.substring(1);
+        this.updateValue({formattedValue: newValue, caretPos: newCaretPosition, input: el});
+      } else if (!negativeRegex.test(value[expectedCaretPosition])) {
+        while (!numRegex.test(value[newCaretPosition - 1]) && newCaretPosition > leftBound){ newCaretPosition--; }
+        newCaretPosition = this.correctCaretPosition(value, newCaretPosition, 'left');
+      }
+    }
+
+
+    if (newCaretPosition !== expectedCaretPosition || expectedCaretPosition < leftBound || expectedCaretPosition > rightBound) {
+      e.preventDefault();
+      this.setPatchedCaretPosition(el, newCaretPosition, value);
+    }
+
+    /* NOTE: this is just required for unit test as we need to get the newCaretPosition,
+            Remove this when you find different solution */
+    if (e.isUnitTestRun) {
+      this.setPatchedCaretPosition(el, newCaretPosition, value);
+    }
+
+
+    onKeyDown(e);
+
+  };
+
+  /** required to handle the caret position when click anywhere within the input **/
+  NumberFormat.prototype.onMouseUp = function onMouseUp (e                          ) {
+    var el = e.target;
+
+    /**
+     * NOTE: we have to give default value for value as in case when custom input is provided
+     * value can come as undefined when nothing is provided on value prop.
+    */
+    var selectionStart = el.selectionStart;
+    var selectionEnd = el.selectionEnd;
+    var value = el.value; if ( value === void 0 ) value = '';
+
+    if (selectionStart === selectionEnd) {
+      var caretPosition = this.correctCaretPosition(value, selectionStart);
+      if (caretPosition !== selectionStart) {
+        this.setPatchedCaretPosition(el, caretPosition, value);
+      }
+    }
+
+    this.props.onMouseUp(e);
+  };
+
+  NumberFormat.prototype.onFocus = function onFocus (e                     ) {
+    var this$1 = this;
+
+    // Workaround Chrome and Safari bug https://bugs.chromium.org/p/chromium/issues/detail?id=779328
+    // (onFocus event target selectionStart is always 0 before setTimeout)
+    e.persist();
+
+    this.focusedElm = e.target;
+    this.focusTimeout = setTimeout(function () {
+      var el = e.target;
+      var selectionStart = el.selectionStart;
+      var selectionEnd = el.selectionEnd;
+      var value = el.value; if ( value === void 0 ) value = '';
+
+      var caretPosition = this$1.correctCaretPosition(value, selectionStart);
+
+      //setPatchedCaretPosition only when everything is not selected on focus (while tabbing into the field)
+      if (caretPosition !== selectionStart && !(selectionStart === 0 && selectionEnd === value.length)) {
+        this$1.setPatchedCaretPosition(el, caretPosition, value);
+      }
+
+      this$1.props.onFocus(e);
+    }, 0);
+  };
+
+  NumberFormat.prototype.render = function render () {
+    var ref = this.props;
+    var type = ref.type;
+    var displayType = ref.displayType;
+    var customInput = ref.customInput;
+    var renderText = ref.renderText;
+    var getInputRef = ref.getInputRef;
+    var format = ref.format;
+    var ref$1 = this.state;
+    var value = ref$1.value;
+    var mounted = ref$1.mounted;
+
+    var otherProps = omit(this.props, propTypes$1);
+
+    // add input mode on element based on format prop and device once the component is mounted 
+    var inputMode = mounted && addInputMode(format) ? 'numeric' : undefined;
+
+    var inputProps = Object.assign({ inputMode: inputMode }, otherProps, {
+      type: type,
+      value: value,
+      onChange: this.onChange,
+      onKeyDown: this.onKeyDown,
+      onMouseUp: this.onMouseUp,
+      onFocus: this.onFocus,
+      onBlur: this.onBlur
+    });
+
+    if( displayType === 'text'){
+      return renderText ? (renderText(value, otherProps) || null) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement( 'span', Object.assign({}, otherProps, { ref: getInputRef }), value);
+    }
+
+    else if (customInput) {
+      var CustomInput = customInput;
+      return (
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement( CustomInput, Object.assign({},
+          inputProps, { ref: getInputRef }))
+      )
+    }
+
+    return (
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement( 'input', Object.assign({},
+        inputProps, { ref: getInputRef }))
+    )
+  };
+
+  return NumberFormat;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
+
+NumberFormat.propTypes = propTypes$1;
+NumberFormat.defaultProps = defaultProps;
+
+/* harmony default export */ __webpack_exports__["default"] = (NumberFormat);
+
+
+/***/ }),
+
 /***/ "./node_modules/react-redux/es/components/Context.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-redux/es/components/Context.js ***!
@@ -69984,6 +72121,105 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/shallowequal/index.js":
+/*!********************************************!*\
+  !*** ./node_modules/shallowequal/index.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+//
+
+module.exports = function shallowEqual(objA, objB, compare, compareContext) {
+  var ret = compare ? compare.call(compareContext, objA, objB) : void 0;
+
+  if (ret !== void 0) {
+    return !!ret;
+  }
+
+  if (objA === objB) {
+    return true;
+  }
+
+  if (typeof objA !== "object" || !objA || typeof objB !== "object" || !objB) {
+    return false;
+  }
+
+  var keysA = Object.keys(objA);
+  var keysB = Object.keys(objB);
+
+  if (keysA.length !== keysB.length) {
+    return false;
+  }
+
+  var bHasOwnProperty = Object.prototype.hasOwnProperty.bind(objB);
+
+  // Test for A's keys different from B.
+  for (var idx = 0; idx < keysA.length; idx++) {
+    var key = keysA[idx];
+
+    if (!bHasOwnProperty(key)) {
+      return false;
+    }
+
+    var valueA = objA[key];
+    var valueB = objB[key];
+
+    ret = compare ? compare.call(compareContext, valueA, valueB, key) : void 0;
+
+    if (ret === false || (ret === void 0 && valueA !== valueB)) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/styled-components/dist/styled-components.browser.esm.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/styled-components/dist/styled-components.browser.esm.js ***!
+  \******************************************************************************/
+/*! exports provided: default, ServerStyleSheet, StyleSheetConsumer, StyleSheetContext, StyleSheetManager, ThemeConsumer, ThemeContext, ThemeProvider, __PRIVATE__, createGlobalStyle, css, isStyledComponent, keyframes, useTheme, version, withTheme */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServerStyleSheet", function() { return Ue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleSheetConsumer", function() { return le; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleSheetContext", function() { return ue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StyleSheetManager", function() { return ye; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThemeConsumer", function() { return Le; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThemeContext", function() { return ze; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThemeProvider", function() { return Ge; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__PRIVATE__", function() { return Ze; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createGlobalStyle", function() { return $e; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "css", function() { return Ae; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isStyledComponent", function() { return N; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "keyframes", function() { return We; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useTheme", function() { return Xe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "version", function() { return C; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withTheme", function() { return Je; });
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_is__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var shallowequal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! shallowequal */ "./node_modules/shallowequal/index.js");
+/* harmony import */ var shallowequal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(shallowequal__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _emotion_stylis__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/stylis */ "./node_modules/@emotion/stylis/dist/stylis.browser.esm.js");
+/* harmony import */ var _emotion_unitless__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emotion/unitless */ "./node_modules/@emotion/unitless/dist/unitless.browser.esm.js");
+/* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/is-prop-valid */ "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__);
+function v(){return(v=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e}).apply(this,arguments)}var g=function(e,t){for(var n=[e[0]],r=0,o=t.length;r<o;r+=1)n.push(t[r],e[r+1]);return n},S=function(t){return null!==t&&"object"==typeof t&&"[object Object]"===(t.toString?t.toString():Object.prototype.toString.call(t))&&!Object(react_is__WEBPACK_IMPORTED_MODULE_0__["typeOf"])(t)},w=Object.freeze([]),E=Object.freeze({});function b(e){return"function"==typeof e}function _(e){return true&&"string"==typeof e&&e||e.displayName||e.name||"Component"}function N(e){return e&&"string"==typeof e.styledComponentId}var A="undefined"!=typeof process&&(process.env.REACT_APP_SC_ATTR||process.env.SC_ATTR)||"data-styled",C="5.2.3",I="undefined"!=typeof window&&"HTMLElement"in window,P=Boolean("boolean"==typeof SC_DISABLE_SPEEDY?SC_DISABLE_SPEEDY:"undefined"!=typeof process&&void 0!==process.env.REACT_APP_SC_DISABLE_SPEEDY&&""!==process.env.REACT_APP_SC_DISABLE_SPEEDY?"false"!==process.env.REACT_APP_SC_DISABLE_SPEEDY&&process.env.REACT_APP_SC_DISABLE_SPEEDY:"undefined"!=typeof process&&void 0!==process.env.SC_DISABLE_SPEEDY&&""!==process.env.SC_DISABLE_SPEEDY?"false"!==process.env.SC_DISABLE_SPEEDY&&process.env.SC_DISABLE_SPEEDY:"production"!=="development"),O={},R= true?{1:"Cannot create styled-component for component: %s.\n\n",2:"Can't collect styles once you've consumed a `ServerStyleSheet`'s styles! `ServerStyleSheet` is a one off instance for each server-side render cycle.\n\n- Are you trying to reuse it across renders?\n- Are you accidentally calling collectStyles twice?\n\n",3:"Streaming SSR is only supported in a Node.js environment; Please do not try to call this method in the browser.\n\n",4:"The `StyleSheetManager` expects a valid target or sheet prop!\n\n- Does this error occur on the client and is your target falsy?\n- Does this error occur on the server and is the sheet falsy?\n\n",5:"The clone method cannot be used on the client!\n\n- Are you running in a client-like environment on the server?\n- Are you trying to run SSR on the client?\n\n",6:"Trying to insert a new style tag, but the given Node is unmounted!\n\n- Are you using a custom target that isn't mounted?\n- Does your document not have a valid head element?\n- Have you accidentally removed a style tag manually?\n\n",7:'ThemeProvider: Please return an object from your "theme" prop function, e.g.\n\n```js\ntheme={() => ({})}\n```\n\n',8:'ThemeProvider: Please make your "theme" prop an object.\n\n',9:"Missing document `<head>`\n\n",10:"Cannot find a StyleSheet instance. Usually this happens if there are multiple copies of styled-components loaded at once. Check out this issue for how to troubleshoot and fix the common cases where this situation can happen: https://github.com/styled-components/styled-components/issues/1941#issuecomment-417862021\n\n",11:"_This error was replaced with a dev-time warning, it will be deleted for v4 final._ [createGlobalStyle] received children which will not be rendered. Please use the component without passing children elements.\n\n",12:"It seems you are interpolating a keyframe declaration (%s) into an untagged string. This was supported in styled-components v3, but is not longer supported in v4 as keyframes are now injected on-demand. Please wrap your string in the css\\`\\` helper which ensures the styles are injected correctly. See https://www.styled-components.com/docs/api#css\n\n",13:"%s is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details.\n\n",14:'ThemeProvider: "theme" prop is required.\n\n',15:"A stylis plugin has been supplied that is not named. We need a name for each plugin to be able to prevent styling collisions between different stylis configurations within the same app. Before you pass your plugin to `<StyleSheetManager stylisPlugins={[]}>`, please make sure each plugin is uniquely-named, e.g.\n\n```js\nObject.defineProperty(importedPlugin, 'name', { value: 'some-unique-name' });\n```\n\n",16:"Reached the limit of how many styled components may be created at group %s.\nYou may only create up to 1,073,741,824 components. If you're creating components dynamically,\nas for instance in your render method then you may be running into this limitation.\n\n",17:"CSSStyleSheet could not be found on HTMLStyleElement.\nHas styled-components' style tag been unmounted or altered by another script?\n"}:undefined;function D(){for(var e=arguments.length<=0?void 0:arguments[0],t=[],n=1,r=arguments.length;n<r;n+=1)t.push(n<0||arguments.length<=n?void 0:arguments[n]);return t.forEach((function(t){e=e.replace(/%[a-z]/,t)})),e}function j(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];throw false?undefined:new Error(D.apply(void 0,[R[e]].concat(n)).trim())}var T=function(){function e(e){this.groupSizes=new Uint32Array(512),this.length=512,this.tag=e}var t=e.prototype;return t.indexOfGroup=function(e){for(var t=0,n=0;n<e;n++)t+=this.groupSizes[n];return t},t.insertRules=function(e,t){if(e>=this.groupSizes.length){for(var n=this.groupSizes,r=n.length,o=r;e>=o;)(o<<=1)<0&&j(16,""+e);this.groupSizes=new Uint32Array(o),this.groupSizes.set(n),this.length=o;for(var i=r;i<o;i++)this.groupSizes[i]=0}for(var s=this.indexOfGroup(e+1),a=0,c=t.length;a<c;a++)this.tag.insertRule(s,t[a])&&(this.groupSizes[e]++,s++)},t.clearGroup=function(e){if(e<this.length){var t=this.groupSizes[e],n=this.indexOfGroup(e),r=n+t;this.groupSizes[e]=0;for(var o=n;o<r;o++)this.tag.deleteRule(n)}},t.getGroup=function(e){var t="";if(e>=this.length||0===this.groupSizes[e])return t;for(var n=this.groupSizes[e],r=this.indexOfGroup(e),o=r+n,i=r;i<o;i++)t+=this.tag.getRule(i)+"/*!sc*/\n";return t},e}(),k=new Map,x=new Map,V=1,B=function(e){if(k.has(e))return k.get(e);for(;x.has(V);)V++;var t=V++;return true&&((0|t)<0||t>1<<30)&&j(16,""+t),k.set(e,t),x.set(t,e),t},M=function(e){return x.get(e)},z=function(e,t){k.set(e,t),x.set(t,e)},L="style["+A+'][data-styled-version="5.2.3"]',G=new RegExp("^"+A+'\\.g(\\d+)\\[id="([\\w\\d-]+)"\\].*?"([^"]*)'),F=function(e,t,n){for(var r,o=n.split(","),i=0,s=o.length;i<s;i++)(r=o[i])&&e.registerName(t,r)},Y=function(e,t){for(var n=t.innerHTML.split("/*!sc*/\n"),r=[],o=0,i=n.length;o<i;o++){var s=n[o].trim();if(s){var a=s.match(G);if(a){var c=0|parseInt(a[1],10),u=a[2];0!==c&&(z(u,c),F(e,u,a[3]),e.getTag().insertRules(c,r)),r.length=0}else r.push(s)}}},q=function(){return"undefined"!=typeof window&&void 0!==window.__webpack_nonce__?window.__webpack_nonce__:null},H=function(e){var t=document.head,n=e||t,r=document.createElement("style"),o=function(e){for(var t=e.childNodes,n=t.length;n>=0;n--){var r=t[n];if(r&&1===r.nodeType&&r.hasAttribute(A))return r}}(n),i=void 0!==o?o.nextSibling:null;r.setAttribute(A,"active"),r.setAttribute("data-styled-version","5.2.3");var s=q();return s&&r.setAttribute("nonce",s),n.insertBefore(r,i),r},$=function(){function e(e){var t=this.element=H(e);t.appendChild(document.createTextNode("")),this.sheet=function(e){if(e.sheet)return e.sheet;for(var t=document.styleSheets,n=0,r=t.length;n<r;n++){var o=t[n];if(o.ownerNode===e)return o}j(17)}(t),this.length=0}var t=e.prototype;return t.insertRule=function(e,t){try{return this.sheet.insertRule(t,e),this.length++,!0}catch(e){return!1}},t.deleteRule=function(e){this.sheet.deleteRule(e),this.length--},t.getRule=function(e){var t=this.sheet.cssRules[e];return void 0!==t&&"string"==typeof t.cssText?t.cssText:""},e}(),W=function(){function e(e){var t=this.element=H(e);this.nodes=t.childNodes,this.length=0}var t=e.prototype;return t.insertRule=function(e,t){if(e<=this.length&&e>=0){var n=document.createTextNode(t),r=this.nodes[e];return this.element.insertBefore(n,r||null),this.length++,!0}return!1},t.deleteRule=function(e){this.element.removeChild(this.nodes[e]),this.length--},t.getRule=function(e){return e<this.length?this.nodes[e].textContent:""},e}(),U=function(){function e(e){this.rules=[],this.length=0}var t=e.prototype;return t.insertRule=function(e,t){return e<=this.length&&(this.rules.splice(e,0,t),this.length++,!0)},t.deleteRule=function(e){this.rules.splice(e,1),this.length--},t.getRule=function(e){return e<this.length?this.rules[e]:""},e}(),J=I,X={isServer:!I,useCSSOMInjection:!P},Z=function(){function e(e,t,n){void 0===e&&(e=E),void 0===t&&(t={}),this.options=v({},X,{},e),this.gs=t,this.names=new Map(n),!this.options.isServer&&I&&J&&(J=!1,function(e){for(var t=document.querySelectorAll(L),n=0,r=t.length;n<r;n++){var o=t[n];o&&"active"!==o.getAttribute(A)&&(Y(e,o),o.parentNode&&o.parentNode.removeChild(o))}}(this))}e.registerId=function(e){return B(e)};var t=e.prototype;return t.reconstructWithOptions=function(t,n){return void 0===n&&(n=!0),new e(v({},this.options,{},t),this.gs,n&&this.names||void 0)},t.allocateGSInstance=function(e){return this.gs[e]=(this.gs[e]||0)+1},t.getTag=function(){return this.tag||(this.tag=(n=(t=this.options).isServer,r=t.useCSSOMInjection,o=t.target,e=n?new U(o):r?new $(o):new W(o),new T(e)));var e,t,n,r,o},t.hasNameForId=function(e,t){return this.names.has(e)&&this.names.get(e).has(t)},t.registerName=function(e,t){if(B(e),this.names.has(e))this.names.get(e).add(t);else{var n=new Set;n.add(t),this.names.set(e,n)}},t.insertRules=function(e,t,n){this.registerName(e,t),this.getTag().insertRules(B(e),n)},t.clearNames=function(e){this.names.has(e)&&this.names.get(e).clear()},t.clearRules=function(e){this.getTag().clearGroup(B(e)),this.clearNames(e)},t.clearTag=function(){this.tag=void 0},t.toString=function(){return function(e){for(var t=e.getTag(),n=t.length,r="",o=0;o<n;o++){var i=M(o);if(void 0!==i){var s=e.names.get(i),a=t.getGroup(o);if(void 0!==s&&0!==a.length){var c=A+".g"+o+'[id="'+i+'"]',u="";void 0!==s&&s.forEach((function(e){e.length>0&&(u+=e+",")})),r+=""+a+c+'{content:"'+u+'"}/*!sc*/\n'}}}return r}(this)},e}(),K=/(a)(d)/gi,Q=function(e){return String.fromCharCode(e+(e>25?39:97))};function ee(e){var t,n="";for(t=Math.abs(e);t>52;t=t/52|0)n=Q(t%52)+n;return(Q(t%52)+n).replace(K,"$1-$2")}var te=function(e,t){for(var n=t.length;n;)e=33*e^t.charCodeAt(--n);return e},ne=function(e){return te(5381,e)};function re(e){for(var t=0;t<e.length;t+=1){var n=e[t];if(b(n)&&!N(n))return!1}return!0}var oe=ne("5.2.3"),ie=function(){function e(e,t,n){this.rules=e,this.staticRulesId="",this.isStatic= false&&false,this.componentId=t,this.baseHash=te(oe,t),this.baseStyle=n,Z.registerId(t)}return e.prototype.generateAndInjectStyles=function(e,t,n){var r=this.componentId,o=[];if(this.baseStyle&&o.push(this.baseStyle.generateAndInjectStyles(e,t,n)),this.isStatic&&!n.hash)if(this.staticRulesId&&t.hasNameForId(r,this.staticRulesId))o.push(this.staticRulesId);else{var i=Ne(this.rules,e,t,n).join(""),s=ee(te(this.baseHash,i.length)>>>0);if(!t.hasNameForId(r,s)){var a=n(i,"."+s,void 0,r);t.insertRules(r,s,a)}o.push(s),this.staticRulesId=s}else{for(var c=this.rules.length,u=te(this.baseHash,n.hash),l="",d=0;d<c;d++){var h=this.rules[d];if("string"==typeof h)l+=h, true&&(u=te(u,h+d));else if(h){var p=Ne(h,e,t,n),f=Array.isArray(p)?p.join(""):p;u=te(u,f+d),l+=f}}if(l){var m=ee(u>>>0);if(!t.hasNameForId(r,m)){var y=n(l,"."+m,void 0,r);t.insertRules(r,m,y)}o.push(m)}}return o.join(" ")},e}(),se=/^\s*\/\/.*$/gm,ae=[":","[",".","#"];function ce(e){var t,n,r,o,i=void 0===e?E:e,s=i.options,a=void 0===s?E:s,c=i.plugins,u=void 0===c?w:c,l=new _emotion_stylis__WEBPACK_IMPORTED_MODULE_3__["default"](a),d=[],h=function(e){function t(t){if(t)try{e(t+"}")}catch(e){}}return function(n,r,o,i,s,a,c,u,l,d){switch(n){case 1:if(0===l&&64===r.charCodeAt(0))return e(r+";"),"";break;case 2:if(0===u)return r+"/*|*/";break;case 3:switch(u){case 102:case 112:return e(o[0]+r),"";default:return r+(0===d?"/*|*/":"")}case-2:r.split("/*|*/}").forEach(t)}}}((function(e){d.push(e)})),f=function(e,r,i){return 0===r&&-1!==ae.indexOf(i[n.length])||i.match(o)?e:"."+t};function m(e,i,s,a){void 0===a&&(a="&");var c=e.replace(se,""),u=i&&s?s+" "+i+" { "+c+" }":c;return t=a,n=i,r=new RegExp("\\"+n+"\\b","g"),o=new RegExp("(\\"+n+"\\b){2,}"),l(s||!i?"":i,u)}return l.use([].concat(u,[function(e,t,o){2===e&&o.length&&o[0].lastIndexOf(n)>0&&(o[0]=o[0].replace(r,f))},h,function(e){if(-2===e){var t=d;return d=[],t}}])),m.hash=u.length?u.reduce((function(e,t){return t.name||j(15),te(e,t.name)}),5381).toString():"",m}var ue=react__WEBPACK_IMPORTED_MODULE_1___default.a.createContext(),le=ue.Consumer,de=react__WEBPACK_IMPORTED_MODULE_1___default.a.createContext(),he=(de.Consumer,new Z),pe=ce();function fe(){return Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(ue)||he}function me(){return Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(de)||pe}function ye(e){var t=Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(e.stylisPlugins),n=t[0],i=t[1],c=fe(),u=Object(react__WEBPACK_IMPORTED_MODULE_1__["useMemo"])((function(){var t=c;return e.sheet?t=e.sheet:e.target&&(t=t.reconstructWithOptions({target:e.target},!1)),e.disableCSSOMInjection&&(t=t.reconstructWithOptions({useCSSOMInjection:!1})),t}),[e.disableCSSOMInjection,e.sheet,e.target]),l=Object(react__WEBPACK_IMPORTED_MODULE_1__["useMemo"])((function(){return ce({options:{prefix:!e.disableVendorPrefixes},plugins:n})}),[e.disableVendorPrefixes,n]);return Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])((function(){shallowequal__WEBPACK_IMPORTED_MODULE_2___default()(n,e.stylisPlugins)||i(e.stylisPlugins)}),[e.stylisPlugins]),react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ue.Provider,{value:u},react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(de.Provider,{value:l}, true?react__WEBPACK_IMPORTED_MODULE_1___default.a.Children.only(e.children):undefined))}var ve=function(){function e(e,t){var n=this;this.inject=function(e,t){void 0===t&&(t=pe);var r=n.name+t.hash;e.hasNameForId(n.id,r)||e.insertRules(n.id,r,t(n.rules,r,"@keyframes"))},this.toString=function(){return j(12,String(n.name))},this.name=e,this.id="sc-keyframes-"+e,this.rules=t}return e.prototype.getName=function(e){return void 0===e&&(e=pe),this.name+e.hash},e}(),ge=/([A-Z])/,Se=/([A-Z])/g,we=/^ms-/,Ee=function(e){return"-"+e.toLowerCase()};function be(e){return ge.test(e)?e.replace(Se,Ee).replace(we,"-ms-"):e}var _e=function(e){return null==e||!1===e||""===e};function Ne(e,n,r,o){if(Array.isArray(e)){for(var i,s=[],a=0,c=e.length;a<c;a+=1)""!==(i=Ne(e[a],n,r,o))&&(Array.isArray(i)?s.push.apply(s,i):s.push(i));return s}if(_e(e))return"";if(N(e))return"."+e.styledComponentId;if(b(e)){if("function"!=typeof(l=e)||l.prototype&&l.prototype.isReactComponent||!n)return e;var u=e(n);return true&&Object(react_is__WEBPACK_IMPORTED_MODULE_0__["isElement"])(u)&&console.warn(_(e)+" is not a styled component and cannot be referred to via component selector. See https://www.styled-components.com/docs/advanced#referring-to-other-components for more details."),Ne(u,n,r,o)}var l;return e instanceof ve?r?(e.inject(r,o),e.getName(o)):e:S(e)?function e(t,n){var r,o,i=[];for(var s in t)t.hasOwnProperty(s)&&!_e(t[s])&&(S(t[s])?i.push.apply(i,e(t[s],s)):b(t[s])?i.push(be(s)+":",t[s],";"):i.push(be(s)+": "+(r=s,null==(o=t[s])||"boolean"==typeof o||""===o?"":"number"!=typeof o||0===o||r in _emotion_unitless__WEBPACK_IMPORTED_MODULE_4__["default"]?String(o).trim():o+"px")+";"));return n?[n+" {"].concat(i,["}"]):i}(e):e.toString()}function Ae(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];return b(e)||S(e)?Ne(g(w,[e].concat(n))):0===n.length&&1===e.length&&"string"==typeof e[0]?e:Ne(g(e,n))}var Ce=/invalid hook call/i,Ie=new Set,Pe=function(e,t){if(true){var n="The component "+e+(t?' with the id of "'+t+'"':"")+" has been created dynamically.\nYou may see this warning because you've called styled inside another component.\nTo resolve this only create new StyledComponents outside of any render method and function component.";try{Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(),Ie.has(n)||(console.warn(n),Ie.add(n))}catch(e){Ce.test(e.message)&&Ie.delete(n)}}},Oe=function(e,t,n){return void 0===n&&(n=E),e.theme!==n.theme&&e.theme||t||n.theme},Re=/[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~-]+/g,De=/(^-|-$)/g;function je(e){return e.replace(Re,"-").replace(De,"")}var Te=function(e){return ee(ne(e)>>>0)};function ke(e){return"string"==typeof e&&( false||e.charAt(0)===e.charAt(0).toLowerCase())}var xe=function(e){return"function"==typeof e||"object"==typeof e&&null!==e&&!Array.isArray(e)},Ve=function(e){return"__proto__"!==e&&"constructor"!==e&&"prototype"!==e};function Be(e,t,n){var r=e[n];xe(t)&&xe(r)?Me(r,t):e[n]=t}function Me(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];for(var o=0,i=n;o<i.length;o++){var s=i[o];if(xe(s))for(var a in s)Ve(a)&&Be(e,s[a],a)}return e}var ze=react__WEBPACK_IMPORTED_MODULE_1___default.a.createContext(),Le=ze.Consumer;function Ge(e){var t=Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(ze),n=Object(react__WEBPACK_IMPORTED_MODULE_1__["useMemo"])((function(){return function(e,t){if(!e)return j(14);if(b(e)){var n=e(t);return false||null!==n&&!Array.isArray(n)&&"object"==typeof n?n:j(7)}return Array.isArray(e)||"object"!=typeof e?j(8):t?v({},t,{},e):e}(e.theme,t)}),[e.theme,t]);return e.children?react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ze.Provider,{value:n},e.children):null}var Fe={};function Ye(e,t,n){var o=N(e),s=!ke(e),a=t.attrs,c=void 0===a?w:a,d=t.componentId,h=void 0===d?function(e,t){var n="string"!=typeof e?"sc":je(e);Fe[n]=(Fe[n]||0)+1;var r=n+"-"+Te("5.2.3"+n+Fe[n]);return t?t+"-"+r:r}(t.displayName,t.parentComponentId):d,p=t.displayName,f=void 0===p?function(e){return ke(e)?"styled."+e:"Styled("+_(e)+")"}(e):p,g=t.displayName&&t.componentId?je(t.displayName)+"-"+t.componentId:t.componentId||h,S=o&&e.attrs?Array.prototype.concat(e.attrs,c).filter(Boolean):c,A=t.shouldForwardProp;o&&e.shouldForwardProp&&(A=t.shouldForwardProp?function(n,r){return e.shouldForwardProp(n,r)&&t.shouldForwardProp(n,r)}:e.shouldForwardProp);var C,I=new ie(n,g,o?e.componentStyle:void 0),P=I.isStatic&&0===c.length,O=function(e,t){return function(e,t,n,r){var o=e.attrs,s=e.componentStyle,a=e.defaultProps,c=e.foldedComponentIds,d=e.shouldForwardProp,h=e.styledComponentId,p=e.target; true&&Object(react__WEBPACK_IMPORTED_MODULE_1__["useDebugValue"])(h);var f=function(e,t,n){void 0===e&&(e=E);var r=v({},t,{theme:e}),o={};return n.forEach((function(e){var t,n,i,s=e;for(t in b(s)&&(s=s(r)),s)r[t]=o[t]="className"===t?(n=o[t],i=s[t],n&&i?n+" "+i:n||i):s[t]})),[r,o]}(Oe(t,Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(ze),a)||E,t,o),y=f[0],g=f[1],S=function(e,t,n,r){var o=fe(),i=me(),s=t?e.generateAndInjectStyles(E,o,i):e.generateAndInjectStyles(n,o,i);return true&&Object(react__WEBPACK_IMPORTED_MODULE_1__["useDebugValue"])(s), true&&!t&&r&&r(s),s}(s,r,y, true?e.warnTooManyClasses:undefined),w=n,_=g.$as||t.$as||g.as||t.as||p,N=ke(_),A=g!==t?v({},t,{},g):t,C={};for(var I in A)"$"!==I[0]&&"as"!==I&&("forwardedAs"===I?C.as=A[I]:(d?d(I,_emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__["default"]):!N||Object(_emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_5__["default"])(I))&&(C[I]=A[I]));return t.style&&g.style!==t.style&&(C.style=v({},t.style,{},g.style)),C.className=Array.prototype.concat(c,h,S!==h?S:null,t.className,g.className).filter(Boolean).join(" "),C.ref=w,Object(react__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_,C)}(C,e,t,P)};return O.displayName=f,(C=react__WEBPACK_IMPORTED_MODULE_1___default.a.forwardRef(O)).attrs=S,C.componentStyle=I,C.displayName=f,C.shouldForwardProp=A,C.foldedComponentIds=o?Array.prototype.concat(e.foldedComponentIds,e.styledComponentId):w,C.styledComponentId=g,C.target=o?e.target:e,C.withComponent=function(e){var r=t.componentId,o=function(e,t){if(null==e)return{};var n,r,o={},i=Object.keys(e);for(r=0;r<i.length;r++)n=i[r],t.indexOf(n)>=0||(o[n]=e[n]);return o}(t,["componentId"]),i=r&&r+"-"+(ke(e)?e:je(_(e)));return Ye(e,v({},o,{attrs:S,componentId:i}),n)},Object.defineProperty(C,"defaultProps",{get:function(){return this._foldedDefaultProps},set:function(t){this._foldedDefaultProps=o?Me({},e.defaultProps,t):t}}), true&&(Pe(f,g),C.warnTooManyClasses=function(e,t){var n={},r=!1;return function(o){if(!r&&(n[o]=!0,Object.keys(n).length>=200)){var i=t?' with the id of "'+t+'"':"";console.warn("Over 200 classes were generated for component "+e+i+".\nConsider using the attrs method, together with a style object for frequently changed styles.\nExample:\n  const Component = styled.div.attrs(props => ({\n    style: {\n      background: props.background,\n    },\n  }))`width: 100%;`\n\n  <Component />"),r=!0,n={}}}}(f,g)),C.toString=function(){return"."+C.styledComponentId},s&&hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6___default()(C,e,{attrs:!0,componentStyle:!0,displayName:!0,foldedComponentIds:!0,shouldForwardProp:!0,styledComponentId:!0,target:!0,withComponent:!0}),C}var qe=function(e){return function e(t,r,o){if(void 0===o&&(o=E),!Object(react_is__WEBPACK_IMPORTED_MODULE_0__["isValidElementType"])(r))return j(1,String(r));var i=function(){return t(r,o,Ae.apply(void 0,arguments))};return i.withConfig=function(n){return e(t,r,v({},o,{},n))},i.attrs=function(n){return e(t,r,v({},o,{attrs:Array.prototype.concat(o.attrs,n).filter(Boolean)}))},i}(Ye,e)};["a","abbr","address","area","article","aside","audio","b","base","bdi","bdo","big","blockquote","body","br","button","canvas","caption","cite","code","col","colgroup","data","datalist","dd","del","details","dfn","dialog","div","dl","dt","em","embed","fieldset","figcaption","figure","footer","form","h1","h2","h3","h4","h5","h6","head","header","hgroup","hr","html","i","iframe","img","input","ins","kbd","keygen","label","legend","li","link","main","map","mark","marquee","menu","menuitem","meta","meter","nav","noscript","object","ol","optgroup","option","output","p","param","picture","pre","progress","q","rp","rt","ruby","s","samp","script","section","select","small","source","span","strong","style","sub","summary","sup","table","tbody","td","textarea","tfoot","th","thead","time","title","tr","track","u","ul","var","video","wbr","circle","clipPath","defs","ellipse","foreignObject","g","image","line","linearGradient","marker","mask","path","pattern","polygon","polyline","radialGradient","rect","stop","svg","text","tspan"].forEach((function(e){qe[e]=qe(e)}));var He=function(){function e(e,t){this.rules=e,this.componentId=t,this.isStatic=re(e),Z.registerId(this.componentId+1)}var t=e.prototype;return t.createStyles=function(e,t,n,r){var o=r(Ne(this.rules,t,n,r).join(""),""),i=this.componentId+e;n.insertRules(i,i,o)},t.removeStyles=function(e,t){t.clearRules(this.componentId+e)},t.renderStyles=function(e,t,n,r){e>2&&Z.registerId(this.componentId+e),this.removeStyles(e,n),this.createStyles(e,t,n,r)},e}();function $e(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),o=1;o<t;o++)n[o-1]=arguments[o];var s=Ae.apply(void 0,[e].concat(n)),a="sc-global-"+Te(JSON.stringify(s)),u=new He(s,a);function l(e){var t=fe(),n=me(),o=Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(ze),l=Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(t.allocateGSInstance(a)).current;return true&&react__WEBPACK_IMPORTED_MODULE_1___default.a.Children.count(e.children)&&console.warn("The global style component "+a+" was given child JSX. createGlobalStyle does not render children."), true&&s.some((function(e){return"string"==typeof e&&-1!==e.indexOf("@import")}))&&console.warn("Please do not use @import CSS syntax in createGlobalStyle at this time, as the CSSOM APIs we use in production do not handle it well. Instead, we recommend using a library such as react-helmet to inject a typical <link> meta tag to the stylesheet, or simply embedding it manually in your index.html <head> section for a simpler app."),Object(react__WEBPACK_IMPORTED_MODULE_1__["useLayoutEffect"])((function(){return h(l,e,t,o,n),function(){return u.removeStyles(l,t)}}),[l,e,t,o,n]),null}function h(e,t,n,r,o){if(u.isStatic)u.renderStyles(e,O,n,o);else{var i=v({},t,{theme:Oe(t,r,l.defaultProps)});u.renderStyles(e,i,n,o)}}return true&&Pe(a),react__WEBPACK_IMPORTED_MODULE_1___default.a.memo(l)}function We(e){ true&&"undefined"!=typeof navigator&&"ReactNative"===navigator.product&&console.warn("`keyframes` cannot be used on ReactNative, only on the web. To do animation in ReactNative please use Animated.");for(var t=arguments.length,n=new Array(t>1?t-1:0),r=1;r<t;r++)n[r-1]=arguments[r];var o=Ae.apply(void 0,[e].concat(n)).join(""),i=Te(o);return new ve(i,o)}var Ue=function(){function e(){var e=this;this._emitSheetCSS=function(){var t=e.instance.toString(),n=q();return"<style "+[n&&'nonce="'+n+'"',A+'="true"','data-styled-version="5.2.3"'].filter(Boolean).join(" ")+">"+t+"</style>"},this.getStyleTags=function(){return e.sealed?j(2):e._emitSheetCSS()},this.getStyleElement=function(){var t;if(e.sealed)return j(2);var n=((t={})[A]="",t["data-styled-version"]="5.2.3",t.dangerouslySetInnerHTML={__html:e.instance.toString()},t),o=q();return o&&(n.nonce=o),[react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("style",v({},n,{key:"sc-0-0"}))]},this.seal=function(){e.sealed=!0},this.instance=new Z({isServer:!0}),this.sealed=!1}var t=e.prototype;return t.collectStyles=function(e){return this.sealed?j(2):react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ye,{sheet:this.instance},e)},t.interleaveWithNodeStream=function(e){return j(3)},e}(),Je=function(e){var t=react__WEBPACK_IMPORTED_MODULE_1___default.a.forwardRef((function(t,n){var o=Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(ze),s=e.defaultProps,a=Oe(t,o,s);return true&&void 0===a&&console.warn('[withTheme] You are not using a ThemeProvider nor passing a theme prop or a theme in defaultProps in component class "'+_(e)+'"'),react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(e,v({},t,{theme:a,ref:n}))}));return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6___default()(t,e),t.displayName="WithTheme("+_(e)+")",t},Xe=function(){return Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(ze)},Ze={StyleSheet:Z,masterSheet:he}; true&&"undefined"!=typeof navigator&&"ReactNative"===navigator.product&&console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native"), true&&(window["__styled-components-init__"]=window["__styled-components-init__"]||0,1===window["__styled-components-init__"]&&console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."),window["__styled-components-init__"]+=1);/* harmony default export */ __webpack_exports__["default"] = (qe);
+//# sourceMappingURL=styled-components.browser.esm.js.map
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+
+/***/ }),
+
 /***/ "./node_modules/symbol-observable/es/index.js":
 /*!****************************************************!*\
   !*** ./node_modules/symbol-observable/es/index.js ***!
@@ -70538,6 +72774,8 @@ var ListadoTransfers = function ListadoTransfers() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_number_format__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-number-format */ "./node_modules/react-number-format/dist/react-number-format.es.js");
+
 
 
 var Transfer = function Transfer(_ref) {
@@ -70554,7 +72792,12 @@ var Transfer = function Transfer(_ref) {
     className: "text-center"
   }, description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
     className: "".concat(tipoTransferencia(amount), " text-center")
-  }, amount));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_number_format__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    value: amount,
+    displayType: 'text',
+    thousandSeparator: true,
+    prefix: 'COP $'
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Transfer);
@@ -70572,19 +72815,33 @@ var Transfer = function Transfer(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_number_format__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-number-format */ "./node_modules/react-number-format/dist/react-number-format.es.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+var _templateObject;
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
+
+
+
+var Titulo = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].p(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  font-size: 80px\n"])));
 
 var Wallet = function Wallet() {
-  var money = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(function (state) {
+  var money = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
     return state.wallet.money;
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-12-m-t-md"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "my-5 font-italic title text-primary h1 font-weight-bold"
-  }, " $ ", money, " "));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Titulo, {
+    className: "my-5 font-italic text-primary h1 font-weight-bold"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_number_format__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    value: money,
+    displayType: 'text',
+    thousandSeparator: true,
+    prefix: 'COP $'
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Wallet);

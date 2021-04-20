@@ -1,11 +1,17 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import NumberFormat from 'react-number-format';
+import { useSelector } from 'react-redux';
+import styled from 'styled-components';
+
+const Titulo = styled.p`
+  font-size: 80px
+`;
 
 const Wallet = () => {
     const money = useSelector(state => state.wallet.money);
     return (
         <div className="col-md-12-m-t-md">
-            <p className="my-5 font-italic title text-primary h1 font-weight-bold"> $ { money } </p>
+            <Titulo className="my-5 font-italic text-primary h1 font-weight-bold"><NumberFormat value={ money } displayType={ 'text' } thousandSeparator={ true } prefix={ 'COP $' } /></Titulo>
         </div>
     )
 }

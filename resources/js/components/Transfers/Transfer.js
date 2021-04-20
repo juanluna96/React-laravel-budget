@@ -1,4 +1,5 @@
 import React from 'react'
+import NumberFormat from 'react-number-format';
 
 const Transfer = ({ transferencia }) => {
     const { amount, description } = transferencia;
@@ -11,7 +12,7 @@ const Transfer = ({ transferencia }) => {
     return (
         <tr>
             <td className="text-center">{ description }</td>
-            <td className={ `${tipoTransferencia(amount)} text-center` }>{ amount }</td>
+            <td className={ `${tipoTransferencia(amount)} text-center` }><NumberFormat value={ amount } displayType={ 'text' } thousandSeparator={ true } prefix={ 'COP $' } /></td>
         </tr>
     )
 }
