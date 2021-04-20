@@ -72396,11 +72396,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../types */ "./resources/js/types/index.js");
+/* harmony import */ var _url__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../url */ "./resources/js/url.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 
  // Funcion para crear nueva transferencia
 
@@ -72414,7 +72416,7 @@ function crearNuevaTransferenciaAction(transfer) {
             case 0:
               _context.prev = 0;
               _context.next = 3;
-              return axios.post('http://localhost:8000/api/transfer', transfer);
+              return axios.post("".concat(_url__WEBPACK_IMPORTED_MODULE_2__["default"], "/api/transfer"), transfer);
 
             case 3:
               resultado = _context.sent;
@@ -72460,7 +72462,7 @@ var ObtenerTransferenciasAction = function ObtenerTransferenciasAction() {
             case 0:
               _context2.prev = 0;
               _context2.next = 3;
-              return axios.get('http://localhost:8000/api/wallet');
+              return axios.get("".concat(_url__WEBPACK_IMPORTED_MODULE_2__["default"], "/api/wallet"));
 
             case 3:
               resultado = _context2.sent;
@@ -72966,6 +72968,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OBTENER_TRANSFERS", function() { return OBTENER_TRANSFERS; });
 var AGREGAR_TRANSFERENCIA = 'AGREGAR_TRANSFERENCIA';
 var OBTENER_TRANSFERS = 'OBTENER_TRANSFERS';
+
+/***/ }),
+
+/***/ "./resources/js/url.js":
+/*!*****************************!*\
+  !*** ./resources/js/url.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var url = 'http://localhost:8000';
+/* harmony default export */ __webpack_exports__["default"] = (url);
 
 /***/ }),
 

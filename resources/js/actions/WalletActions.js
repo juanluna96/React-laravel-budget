@@ -1,4 +1,5 @@
 import { OBTENER_TRANSFERS, AGREGAR_TRANSFERENCIA } from '../types';
+import url from '../url';
 
 // Funcion para crear nueva transferencia
 
@@ -6,7 +7,7 @@ export function crearNuevaTransferenciaAction(transfer) {
     return async (dispatch) => {
         try {
             // Insertar en la api
-            const resultado = await axios.post('http://localhost:8000/api/transfer', transfer);
+            const resultado = await axios.post(`${url}/api/transfer`, transfer);
 
             // Si todo sale bien, actualizar el state
             dispatch(agregarTransferencia(resultado.data));
@@ -29,7 +30,7 @@ const agregarTransferencia = (transfer) => {
 export const ObtenerTransferenciasAction = () => {
     return async (dispatch) => {
         try {
-            const resultado = await axios.get('http://localhost:8000/api/wallet');
+            const resultado = await axios.get(`${url}/api/wallet`);
             dispatch(obtenerTransferencias(resultado.data));
         } catch (error) {
             console.log(error);

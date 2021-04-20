@@ -14,7 +14,7 @@ class WalletSeeder extends Seeder
     public function run()
     {
         DB::table('wallets')->insert([
-            'money' => 3600.00,
+            'money' => 3000000.00,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);

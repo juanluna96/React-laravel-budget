@@ -16,7 +16,7 @@ class CreateTransfersTable extends Migration
         Schema::create('transfers', function (Blueprint $table) {
             $table->id();
             $table->text('description');
-            $table->float('amount');
+            $table->float('amount', 15);
             $table->integer('wallet_id')->unsigned();
             $table->timestamps();
         });
