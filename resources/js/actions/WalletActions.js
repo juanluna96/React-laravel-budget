@@ -1,4 +1,28 @@
-import { OBTENER_TRANSFERS } from '../types';
+import { OBTENER_TRANSFERS, AGREGAR_TRANSFERENCIA } from '../types';
+
+// Funcion para crear nueva transferencia
+
+export function crearNuevaTransferenciaAction(transfer) {
+    return async (dispatch) => {
+        try {
+            // Insertar en la api
+            await axios.post('http://localhost:8000/api/transfer', transfer);
+
+            // Si todo sale bien, actualizar el state
+            dispatch(agregarTransferencia(transfer));
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+
+// Si el producto se guarda en la base de datos
+const agregarTransferencia = (transfer) => {
+    return ({
+        type: AGREGAR_TRANSFERENCIA,
+        payload: transfer
+    })
+}
 
 // Funcion que descarga los productos de la base de datos
 

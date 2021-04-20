@@ -70150,11 +70150,12 @@ module.exports = function(module) {
 /*!***********************************************!*\
   !*** ./resources/js/actions/WalletActions.js ***!
   \***********************************************/
-/*! exports provided: ObtenerTransferenciasAction */
+/*! exports provided: crearNuevaTransferenciaAction, ObtenerTransferenciasAction */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "crearNuevaTransferenciaAction", function() { return crearNuevaTransferenciaAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ObtenerTransferenciasAction", function() { return ObtenerTransferenciasAction; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
@@ -70165,41 +70166,85 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
- // Funcion que descarga los productos de la base de datos
+ // Funcion para crear nueva transferencia
 
-var ObtenerTransferenciasAction = function ObtenerTransferenciasAction() {
+function crearNuevaTransferenciaAction(transfer) {
   return /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(dispatch) {
-      var resultado;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.prev = 0;
               _context.next = 3;
-              return axios.get('http://localhost:8000/api/wallet');
+              return axios.post('http://localhost:8000/api/transfer', transfer);
 
             case 3:
-              resultado = _context.sent;
-              dispatch(obtenerTransferencias(resultado.data));
-              _context.next = 10;
+              // Si todo sale bien, actualizar el state
+              dispatch(agregarTransferencia(transfer));
+              _context.next = 9;
               break;
 
-            case 7:
-              _context.prev = 7;
+            case 6:
+              _context.prev = 6;
               _context.t0 = _context["catch"](0);
               console.log(_context.t0);
 
-            case 10:
+            case 9:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[0, 7]]);
+      }, _callee, null, [[0, 6]]);
     }));
 
     return function (_x) {
       return _ref.apply(this, arguments);
+    };
+  }();
+} // Si el producto se guarda en la base de datos
+
+var agregarTransferencia = function agregarTransferencia(transfer) {
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_1__["AGREGAR_TRANSFERENCIA"],
+    payload: transfer
+  };
+}; // Funcion que descarga los productos de la base de datos
+
+
+var ObtenerTransferenciasAction = function ObtenerTransferenciasAction() {
+  return /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(dispatch) {
+      var resultado;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.prev = 0;
+              _context2.next = 3;
+              return axios.get('http://localhost:8000/api/wallet');
+
+            case 3:
+              resultado = _context2.sent;
+              dispatch(obtenerTransferencias(resultado.data));
+              _context2.next = 10;
+              break;
+
+            case 7:
+              _context2.prev = 7;
+              _context2.t0 = _context2["catch"](0);
+              console.log(_context2.t0);
+
+            case 10:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2, null, [[0, 7]]);
+    }));
+
+    return function (_x2) {
+      return _ref2.apply(this, arguments);
     };
   }();
 };
@@ -70338,20 +70383,69 @@ if (document.getElementById('app')) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _actions_WalletActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/WalletActions */ "./resources/js/actions/WalletActions.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
 
 
 var FormTransfer = function FormTransfer() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    description: '',
+    amount: '',
+    wallet_id: 1
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      Transfer = _useState2[0],
+      setTransfer = _useState2[1];
+
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
+
+  var onChangeFormulario = function onChangeFormulario(e) {
+    setTransfer(_objectSpread(_objectSpread({}, Transfer), {}, _defineProperty({}, e.target.name, e.target.value)));
+  };
+
+  var onSubmitFormulario = function onSubmitFormulario(e) {
+    e.preventDefault();
+    dispatch(Object(_actions_WalletActions__WEBPACK_IMPORTED_MODULE_2__["crearNuevaTransferenciaAction"])(Transfer));
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-12"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    className: "mx-auto form-inline justify-content-center col-md-10"
+    className: "mx-auto form-inline justify-content-center col-md-10",
+    onSubmit: function onSubmit(e) {
+      return onSubmitFormulario(e);
+    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mb-2 col-12 col-md-5 form-group"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     className: "form-control w-100",
     placeholder: "Description",
-    name: "description"
+    name: "description",
+    onChange: function onChange(e) {
+      return onChangeFormulario(e);
+    },
+    value: Transfer.description
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "mb-2 col-12 col-md-5 input-group ms-sm-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -70361,7 +70455,11 @@ var FormTransfer = function FormTransfer() {
   }, "$")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     className: "form-control",
-    name: "amount"
+    name: "amount",
+    onChange: function onChange(e) {
+      return onChangeFormulario(e);
+    },
+    value: Transfer.amount
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
     className: "mb-2 btn btn-primary"
@@ -70512,7 +70610,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var initialState = {
   money: 0.0,
   transfers: [],
-  error: null
+  error: null,
+  form: {}
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -70527,6 +70626,9 @@ var initialState = {
         transfers: payload.transfers,
         money: payload.money
       });
+
+    case _types__WEBPACK_IMPORTED_MODULE_0__["AGREGAR_TRANSFERENCIA"]:
+      return _objectSpread({}, state);
 
     default:
       return state;
@@ -70580,12 +70682,14 @@ var store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_
 /*!*************************************!*\
   !*** ./resources/js/types/index.js ***!
   \*************************************/
-/*! exports provided: OBTENER_TRANSFERS */
+/*! exports provided: AGREGAR_TRANSFERENCIA, OBTENER_TRANSFERS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AGREGAR_TRANSFERENCIA", function() { return AGREGAR_TRANSFERENCIA; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OBTENER_TRANSFERS", function() { return OBTENER_TRANSFERS; });
+var AGREGAR_TRANSFERENCIA = 'AGREGAR_TRANSFERENCIA';
 var OBTENER_TRANSFERS = 'OBTENER_TRANSFERS';
 
 /***/ }),
