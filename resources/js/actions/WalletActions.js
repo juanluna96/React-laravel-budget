@@ -6,10 +6,10 @@ export function crearNuevaTransferenciaAction(transfer) {
     return async (dispatch) => {
         try {
             // Insertar en la api
-            await axios.post('http://localhost:8000/api/transfer', transfer);
+            const resultado = await axios.post('http://localhost:8000/api/transfer', transfer);
 
             // Si todo sale bien, actualizar el state
-            dispatch(agregarTransferencia(transfer));
+            dispatch(agregarTransferencia(resultado.data));
         } catch (error) {
             console.log(error);
         }

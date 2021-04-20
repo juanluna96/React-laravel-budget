@@ -12,7 +12,8 @@ export default (state = initialState, { type, payload }) => {
         case OBTENER_TRANSFERS:
             return { ...state, transfers: payload.transfers, money: payload.money }
         case AGREGAR_TRANSFERENCIA:
-            return { ...state }
+            const dinero = parseInt(state.money, 10) + parseInt(payload.amount, 10);
+            return { ...state, money: dinero, transfers: [...state.transfers, payload] }
         default:
             return state
     }
